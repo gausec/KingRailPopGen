@@ -1,5 +1,5 @@
 # Whole_Genome_QC
-This repository contains files and information pertaining to quality control for whole genome data of 4 species (king rail, clapper rail, Virginia rail, and eastern bluebird). All steps below occured after the original WGS data was saved to an external hard drive. 
+This repository contains files and information pertaining to quality control for whole genome data of 4 species (king rail, clapper rail, Virginia rail, and eastern bluebird). All steps below occured once the original WGS data was saved to an external hard drive. 
 ---
 ### Step 1: File transfer & extraction
 1. Create a subdirectory within the remote server
