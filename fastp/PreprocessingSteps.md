@@ -1,5 +1,5 @@
 # Preprocessing for FastQ files
-> This repository contains steps for the preprocessing of paired-end whole genome data of 4 species (king rail, clapper rail, Virginia rail, and eastern bluebird). All steps below occured in the command line once the original WGS data was saved to an external hard drive. 
+> This subdirectory contains steps for the preprocessing of paired-end whole genome data of 4 species (king rail, clapper rail, Virginia rail, and eastern bluebird). All steps below occured in the command line once the original WGS data was saved to an external hard drive. 
 ---
 ### Step 1: File transfer, extraction, and organization
 1. Create a subdirectory within the remote server
