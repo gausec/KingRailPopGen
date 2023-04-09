@@ -2,7 +2,7 @@
 
 ### This repository contains files and information pertaining to whole genome data of 4 species (king rail, clapper rail, Virginia rail, and eastern bluebird). My research centers the king rail, and so the primary focus of this repository is the processing and analyzing of king rail whole genome data. 
 ---
-### The king rail
+### The king rail (*Rallus elegans*)
 <img
   src="PhotobyNicPMain.jpg"
   alt="The king rail, photographed by Nicolas Main"
