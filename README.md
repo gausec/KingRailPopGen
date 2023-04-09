@@ -7,4 +7,4 @@
   alt="The king rail, photographed by Nicolas Main"
   title="The king rail, photographed by Nicolas Main"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
-*Photo by Nicolas Main*
+The king rail *Photo by Nicolas Main*
