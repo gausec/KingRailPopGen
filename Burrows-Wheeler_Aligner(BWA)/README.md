@@ -6,11 +6,7 @@
 ```
 bwa index Rallus_crepitans.fasta
 ```
-2. Assign basename
-``` 
-base=$(basename -s R1.fastq.gz *R1.fastq.gz | cut -f1 -d-)
+2. Assign basename & align the trimmed reads to the reference genome using the read alignment tool
 ```
-4. Align the trimmed reads to the reference genome using the read alignment tool
-```
-bwa mem Rallus_crepitans.fasta *R1.fastq.gz *R2.fastq.gz > ${base}.sam 
+for r1file in *R1.fastq.gz; do base=$(basename -s -R1.fastq.gz ${r1file}); bwa mem -t 16 index/Rallus_crepitans.fasta ${base}-R1.fastq.gz ${base}-R2.fastq.gz > ${base}.sam; done
 ```
