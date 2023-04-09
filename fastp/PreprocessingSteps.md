@@ -28,7 +28,7 @@ mkdir reports
 *Note: The owner of the Biology Department server installed fastp for this project. fastp is a tool that can be used for quality control and trimming of high-throughput sequencing data in fastq format, including fastq.gz compressed files: https://github.com/OpenGene/fastp*
 
 ### Step 2: Quality control
-1. Generate lists of all forward and reverse reads for peace of mind:
+1. Generate lists of all forward and reverse reads for peace of mind: 
 ```
 for FileName in *_R1_001.fastq.gz; do ls $FileName; done 
 for FileName in *_R2_001.fastq.gz; do ls $FileName; done 
