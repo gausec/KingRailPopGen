@@ -17,5 +17,5 @@ for r1file in *R1.fastq.gz; do base=$(basename -s -R1.fastq.gz ${r1file}); bwa m
 
 3. Convert SAM to BAM using samtools (this saves a lot of space by converting to binary data)
 ```
-samtools view -@ 16 -bS ${base}.sam > ${base}.bam
+for r1file in *.sam; do base=$(basename $r1file .sam); samtools view -@ 40 $r1file > ${base}.bam; done
 ```
