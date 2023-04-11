@@ -29,7 +29,7 @@ mkdir reports
 
 2.1 (Optional) Generate lists of all forward and reverse reads: 
 ```
-for FileName in *_R1_001.fastq.gz; do ls $FileName; done 
+for FileName in *_R1_001.fastq.gz; do ls $FileName; done  
 for FileName in *_R2_001.fastq.gz; do ls $FileName; done 
 ```
 2.2 Use the `cut` command to extract the first field of the filename before the first _ character, store it as the variable `name`, and print it out for each file using the `echo` command. I'm doing this because I want to rename my output files by their shorter sample names. I am using echo to see if the command worked correctly.
