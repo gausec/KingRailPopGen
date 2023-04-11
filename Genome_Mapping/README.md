@@ -17,9 +17,9 @@ mkdir SAM
 ```
 for r1file in *R1.fastq.gz; do base=$(basename -s -R1.fastq.gz ${r1file}); bwa mem -t 16 index/Rallus_crepitans_1.0.fasta ${base}-R1.fastq.gz ${base}-R2.fastq.gz > SAM/${base}.sam; done &
 ```
-*Note: Above, the loop iterates through each R1 fastq file in the current directory using the wildcard `*R1.fastq.gz`. For each R1 file, the base filename is extracted using the `basename` command, and the `-R1.fastq.gz` is removed using the `-s` option. This base name is then used to make the names of the corresponding R2 file and the output SAM file.*
-*Finally, the BWA alignment is performed using `bwa mem` with the clapper rail reference genome & input fastq files. To speed up the process, `-t` indicates I want to use 16 threads (each thread is assigned a portion of the total computing resources (like CPU time, memory) and can execute independently of each other). The output is redirected to a SAM file using the `>` operator. The ampersand (&) at the end runs the command in the background.*
-*Megan: don't worry about the `&` since you have 4  files. I just did this so I can disown the process and leave it to run.*
+- *Note: Above, the loop iterates through each R1 fastq file in the current directory using the wildcard `*R1.fastq.gz`. For each R1 file, the base filename is extracted using the `basename` command, and the `-R1.fastq.gz` is removed using the `-s` option. This base name is then used to make the names of the corresponding R2 file and the output SAM file.*
+- *Finally, the BWA alignment is performed using `bwa mem` with the clapper rail reference genome & input fastq files. To speed up the process, `-t` indicates I want to use 16 threads (each thread is assigned a portion of the total computing resources (like CPU time, memory) and can execute independently of each other). The output is redirected to a SAM file using the `>` operator. The ampersand (&) at the end runs the command in the background.*
+- *Megan: don't worry about the `&` since you have 4  files. I just did this so I can disown the process and leave it to run.*
 
 ---
 #### 3. Convert SAM to BAM using [samtools](https://github.com/samtools/samtools) (this saves a lot of space by converting to binary data)
