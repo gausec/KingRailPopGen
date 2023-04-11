@@ -1,8 +1,8 @@
 # King Rail WGS Project
 
-### This repository contains files and information pertaining to whole genome data of 4 species (king rail, clapper rail, Virginia rail, and eastern bluebird). My research centers the king rail, and so the primary focus of this repository is the processing and analyzing of king rail whole genome data. 
+#### This repository contains files and information pertaining to whole genome data of 4 species (king rail, clapper rail, Virginia rail, and eastern bluebird). My research centers the king rail, and so the primary focus of this repository is the processing and analyzing of king rail whole genome data. I am specifically interested in comparing four geographically separate king rail populations to assess genetic diversity and gene flow. Time permitting, I am also interested in finding genes or genomic regions that affect migration traits (*e.g.*, migratory timing and direction) in king rails.
 ---
-### The king rail (*Rallus elegans*)
+#### The king rail (*Rallus elegans*)
 <img
   src="PhotobyNicPMain.jpg"
   alt="The king rail, photographed by Nicolas Main"
