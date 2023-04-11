@@ -14,11 +14,11 @@ for r1file in *R1.fastq.gz; do base=$(basename -s -R1.fastq.gz ${r1file}); bwa m
 ```
 *Note: Above, the loop iterates through each R1 fastq file in the current directory using the wildcard `*R1.fastq.gz`. For each R1 file, the base filename is extracted using the `basename` command, and the `-R1.fastq.gz` is removed using the `-s` option. This base name is then used to make the names of the corresponding R2 file and the output SAM file. Finally, the BWA alignment is performed using `bwa mem` with the clapper rail reference genome & input fastq files. The output is redirected to a SAM file using the `>` operator. The ampersand (&) at the end runs the command in the background.*
 
-
 3. Convert SAM to BAM using samtools (this saves a lot of space by converting to binary data)
 ```
 for r1file in *.sam; do base=$(basename $r1file .sam); samtools view -@ 40 $r1file > ${base}.bam; done
 ```
+
 4. Arrange the aligned reads in the BAM files based on their coordinates in the reference genome (This is called sorting)
 ```
 for file in 11101.bam 11103.bam 11104.bam ... RK02.bam; do echo "Sorting ${file}..."; samtools sort -@ 40 -T temp_dir ${file} -o sorted/${file%.*}.sorted.bam; done
