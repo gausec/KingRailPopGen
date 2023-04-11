@@ -14,6 +14,7 @@ mkdir WholeGenomes
 tar -xvf sequences.tar
 ```
 1.4 Navigate to these R1 & R2 folders using the `cd` command, and check that the fastq.gz files were successfully extracted
+
 1.5 Navigate back to previous directory using `cd ..` command and remove the tar files to save space
 ```
 rm sequences.tar
