@@ -8,6 +8,7 @@
 mkdir WholeGenomes 
 ```
 1.2 Transfer tar files to remote server using the `scp` command
+
 1.3 Extract folders containing zipped fastq files 
 ```
 tar -xvf sequences.tar
