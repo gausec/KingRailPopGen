@@ -19,3 +19,8 @@ for r1file in *R1.fastq.gz; do base=$(basename -s -R1.fastq.gz ${r1file}); bwa m
 ```
 for r1file in *.sam; do base=$(basename $r1file .sam); samtools view -@ 40 $r1file > ${base}.bam; done
 ```
+4. Arrange the aligned reads in the BAM files based on their coordinates in the reference genome (This is called sorting)
+```
+for file in 11101.bam 11103.bam 11104.bam ... RK02.bam; do echo "Sorting ${file}..."; samtools sort -@ 40 -T temp_dir ${file} -o sorted/${file%.*}.sorted.bam; done
+```
+*Note: The ellipsis indicates that there are similar file types. `-@` specifies that I want to use 40 threads to speed up the process. `${file%.*}` is a parameter expansion that removes the shortest matching pattern from the variable `$file`. In this case, the pattern is `.*`. This matches any sequence of characters that ends with a dot and removes it from the end of `$file`.*
