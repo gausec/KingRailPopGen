@@ -2,7 +2,7 @@
 ---
 #### King Rail Sample Populations
 <img
-  src="KIRAsampleMap.jpg" 
+  src="KIRA_SampleMap.jpg" 
   alt="Sample source locations"
   title="Population locations for comparison"
   style="display: inline-block; margin: 0 auto; max-width: 300px">  
