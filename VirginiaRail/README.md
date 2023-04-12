@@ -25,5 +25,5 @@ mv VIRAref.fna.gz /VIRAindex #Repeated for all index files
 ```
 for r1file in *R1.fastq.gz; do base=$(basename -s -R1.fastq.gz ${r1file}); bwa mem -t 40 VIRAindex/VIRAref.fna.gz ${base}-R1.fastq.gz ${base}-R2.fastq.gz | samtools view -@ 40 -bS > SAM/${base}.bam; done 
 ```
-5. Arrange the aligned reas in the BAM files based on their coordinates (Sorting) using SAMtools.
+5. Arrange the aligned reads in the BAM files based on their coordinates (Sorting) using SAMtools.
 
