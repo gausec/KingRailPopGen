@@ -17,7 +17,7 @@ Grant funding for this project was generously awarded by The Garden Club of Amer
 
 ***
 
-### Contributers:
+### Contributors
 Carol Gause
 
 ---  
