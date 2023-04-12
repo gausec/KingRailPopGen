@@ -7,4 +7,4 @@
   title="Population locations for comparison"
   style="display: inline-block; margin: 0 auto; max-width: 300px">  
   
-[*Range map created by the Audubon Society*](https://www.audubon.org/field-guide/bird/king-rail)
+[*Range map created by the Audubon Society*](https://www.audubon.org/field-guide/bird/king-rail) 
