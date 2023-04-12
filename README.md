@@ -13,7 +13,7 @@ I am interested in comparing four geographically separate king rail populations 
 ***
 
 ### Funding Sources
-Grant funding for this project was generously provided by The Garden Club of America, The Carolina Bird Club, and The Association of Field Ornithologists.
+Grant funding for this project was generously awarded by The Garden Club of America, The Carolina Bird Club, and The Association of Field Ornithologists.
 
 ***
 
