@@ -38,7 +38,7 @@ for file in 67438.bam 78832.bam; do echo "Sorting ${file}..."; samtools sort -@ 
 ```
 samtools depth 67438.sorted.bam | awk '{sum+=$3} END {print "Average depth:", sum/NR}'
 ```
-*The average depth for 67438 is x.*
+*The average depth for 67438 is 9.5x*
 ```
 samtools depth 78832.sorted.bam | awk '{sum+=$3} END {print "Average depth:", sum/NR}'
 ```
