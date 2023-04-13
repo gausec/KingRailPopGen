@@ -34,3 +34,12 @@ mkdir temp_dir
 ```
 for file in 67438.bam 78832.bam; do echo "Sorting ${file}..."; samtools sort -@ 40 -T temp_dir ${file} -o sorted/${file%.*}.sorted.bam; done
 ```
+6. Determine the average depth of the sorted bam files
+```
+samtools depth 67438.sorted.bam | awk '{sum+=$3} END {print "Average depth:", sum/NR}'
+```
+*The average depth for 67438 is x.*
+```
+samtools depth 78832.sorted.bam | awk '{sum+=$3} END {print "Average depth:", sum/NR}'
+```
+*The average depth for 78832 is x.*
