@@ -42,4 +42,4 @@ samtools depth 67438.sorted.bam | awk '{sum+=$3} END {print "Average depth:", su
 ```
 samtools depth 78832.sorted.bam | awk '{sum+=$3} END {print "Average depth:", sum/NR}'
 ```
-*The average depth for 78832 is x.*
+*The average depth for 78832 is 6.6x.*
