@@ -1,20 +1,21 @@
 # Phylogenetic comparison of three _Rallus_ species
 ---
-### Aim  
+### Aim:  
 We are using [ANGSD](http://www.popgen.dk/angsd/index.php/ANGSD#Overview) to phlyogenetically compare three species of North American rails, the clapper rail (_Rallus crepitans_) the Virginia rail (_Rallus limicola_) and the king rail (_Rallus elegans_). One individual from each species will be compared using [ABBABABA(D-stat)](http://www.popgen.dk/angsd/index.php/Abbababa). We are using a Virgina rail whole genome from California (Accession no. JAKCOZ000000000) as a reference to align our two Virigia rail genomes. We will choose one of these two individuals pending coverage information.
 
 ---
 ### Contributors:  Carol Gause and Megan Linke  
 ---
+### Steps:
 
-### 1. Two Virginina rail whole genomes from Mackay Island NWR have been preprocessed using fastp (filtered and trimmed). These were cleaned with all other sequences (see fastp folder in parent directory). 
+### 1. Two Virginina rail whole genomes from Mackay Island NWR have been preprocessed using fastp (filtered and trimmed). These were cleaned with all other sequences (see fastp folder in parent directory).   
 ```
 fastp -i 67438_S1_L002_R1_001.fastq.gz -I 67438_S1_L002_R1_001.fastq.gz -o cleaned/67438-R1.fastq.gz -O cleaned/67438-R2.fastq.gz --html reports/67438.html --json reports/67438.json #Repeat for R2
 ```
 ```
 fastp -i 78832_S1_L002_R1_001.fastq.gz -I 78832_S1_L002_R1_001.fastq.gz -o cleaned/78832-R1.fastq.gz -O cleaned/78832-R2.fastq.gz --html reports/78832.html --json reports/78832.json #Repeat for R2
 ``` 
-### 2. Re-naming and indexing the reference genome using BWA.   
+### 2. Re-naming and indexing the reference genome using BWA   
 ```
 mv GCA_022605955.1_bRalLim1.0.p_genomic.fna.gz VIRAref.fna.gz 
 ```  
