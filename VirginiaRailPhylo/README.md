@@ -58,7 +58,7 @@ for file in *.bam; do echo "$file" >> VIRAflagstats.txt; samtools flagstat "$fil
 ```
 *This loop prints the filename to a text file named VIRAflagstats.txt, runs samtools flagstat on the file & appends the output to the same text file, and then prints an empty line to separate the text. The loop ends when all the .bam files have been processed.*
 
-### 7. Clapper rail genome
+### 7. [Clapper rail genome](https://www.ncbi.nlm.nih.gov/data-hub/genome/GCA_028554615.1/)
 ```
 datasets download genome accession GCA_028554615.1 --include gff3,rna,cds,protein,genome,seq-report --filename GCA_028554615.1.zip
 ```
