@@ -57,3 +57,8 @@ samtools depth 78832.sorted.bam | awk '{sum+=$3} END {print "Average depth:", su
 for file in *.bam; do echo "$file" >> VIRAflagstats.txt; samtools flagstat "$file" >> VIRAflagstats.txt; echo "" >> VIRAflagstats.txt; done
 ```
 *This loop prints the filename to a text file named VIRAflagstats.txt, runs samtools flagstat on the file & appends the output to the same text file, and then prints an empty line to separate the text. The loop ends when all the .bam files have been processed.*
+
+### 7. Clapper rail genome
+```
+datasets download genome accession GCA_028554615.1 --include gff3,rna,cds,protein,genome,seq-report --filename GCA_028554615.1.zip
+```
