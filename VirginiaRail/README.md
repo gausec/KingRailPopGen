@@ -1,7 +1,7 @@
 # Phylogenetic comparison of three _Rallus_ species
 ---
 ### Aim  
-I am using [ANGSD](http://www.popgen.dk/angsd/index.php/ANGSD#Overview) to phlyogenetically compare three species of North American rails, the clapper rail (_Rallus crepitans_) the Virginia rail (_Rallus limicola_) and the king rail (_Rallus elegans_). One individual from each species will be compared using [ABBABABA(D-stat)](http://www.popgen.dk/angsd/index.php/Abbababa). We are using a Virgina rail whole genome from California (Accession no. JAKCOZ000000000) as a reference.
+We are using [ANGSD](http://www.popgen.dk/angsd/index.php/ANGSD#Overview) to phlyogenetically compare three species of North American rails, the clapper rail (_Rallus crepitans_) the Virginia rail (_Rallus limicola_) and the king rail (_Rallus elegans_). One individual from each species will be compared using [ABBABABA(D-stat)](http://www.popgen.dk/angsd/index.php/Abbababa). We are using a Virgina rail whole genome from California (Accession no. JAKCOZ000000000) as a reference to align our two Virigia rail genomes. We will choose one of these two individuals pending coverage information.
 
 ---
 ### Contributors:  Carol Gause and Megan Linke  
