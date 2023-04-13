@@ -10,6 +10,7 @@ I am interested in comparing four geographically separate king rail populations 
 ### Repo Contents
 - **Preprocessing**: A Markdown file containing Bash shell script written to assess quality, filter, and trim demultiplexed 150 bp paired-end sequencing reads.
 - **Genome_Mapping**: A Markdown file containing Bash shell script for mapping reads to a reference genome.
+- **VirginiaRailPhylo**: A Markdown file with Bash shell and R script for a phylogenetic comparison project using our Virigina rail genomes. This project was completed in collaboration with Megan Linke (East Carolina University M.S. student).
 ***
 
 ### Funding Sources
