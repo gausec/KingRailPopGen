@@ -1,0 +1,6 @@
+67438.sorted.bam
+Average depth: 9.53296
+
+78832.sorted.bam
+Average depth: 6.60937
+
