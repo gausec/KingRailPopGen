@@ -47,6 +47,6 @@ for file in *.bam; do echo "$file" >> AvgDepth.txt; samtools depth $file | awk '
 
 #### 6. Mapping summary stats
 ```
-for file in *.bam; do echo "$file" >> KIRAflagstats.txt; samtools flagstat -@ 30 "$file" >> KIRAflagstats.txt; echo "" >> KIRAflagstats.txt; done
+for file in *.sorted.bam; do echo "$file" >> KIRAflagstats.txt; samtools flagstat -@ 30 "$file" >> KIRAflagstats.txt; echo "" >> KIRAflagstats.txt; done
 ```
 *This loop prints the filename to a text file named KIRAflagstats.txt, runs samtools flagstat on the file & appends the output to the same text file, and then prints an empty line to separate the text. The loop ends when all the .bam files have been processed.*
