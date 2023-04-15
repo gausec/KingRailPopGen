@@ -27,11 +27,6 @@ for r1file in *R1.fastq.gz; do base=$(basename -s -R1.fastq.gz ${r1file}); bwa m
 for r1file in *.sam; do base=$(basename $r1file .sam); samtools view -@ 40 $r1file > ${base}.bam; done
 ```
 
-#### 4. Mapping statistics
-4.1 Proportion of the reads that mapped to the reference
-```
-for file in *.bam; do echo "$file" >> flagstats.txt; samtools flagstat "$file" >> flagstats.txt; echo "" >> flagstats.txt; done
-```
 ---
 #### 4. Arrange the aligned reads in the BAM files based on their coordinates in the reference genome (This is called sorting)
 ```
