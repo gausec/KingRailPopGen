@@ -1,0 +1,167 @@
+11101.sorted.bam
+Average depth: 13.36
+
+11103.sorted.bam
+Average depth: 16.0362
+
+11104.sorted.bam
+Average depth: 6.9082
+
+11105.sorted.bam
+Average depth: 17.9021
+
+11108.sorted.bam
+Average depth: 25.3956
+
+11109.sorted.bam
+Average depth: 11.9336
+
+11110.sorted.bam
+Average depth: 11.7707
+
+11111.sorted.bam
+Average depth: 8.40498
+
+11113.sorted.bam
+Average depth: 10.8922
+
+11114.sorted.bam
+Average depth: 8.9542
+
+11115.sorted.bam
+Average depth: 15.6645
+
+11116.sorted.bam
+Average depth: 5.03238
+
+11117.sorted.bam
+Average depth: 13.6679
+
+11119.sorted.bam
+Average depth: 15.6928
+
+11120.sorted.bam
+Average depth: 16.01
+
+43215.sorted.bam
+Average depth: 10.4478
+
+43613.sorted.bam
+Average depth: 17.5469
+
+43617.sorted.bam
+Average depth: 23.5361
+
+43621.sorted.bam
+Average depth: 12.0967
+
+43623.sorted.bam
+Average depth: 16.628
+
+43633.sorted.bam
+Average depth: 5.13733
+
+43639.sorted.bam
+Average depth: 15.5755
+
+43646.sorted.bam
+Average depth: 7.09655
+
+43647.sorted.bam
+Average depth: 8.40504
+
+43649.sorted.bam
+Average depth: 23.4106
+
+43654.sorted.bam
+Average depth: 9.38421
+
+43657.sorted.bam
+Average depth: 13.0213
+
+43670.sorted.bam
+Average depth: 8.46548
+
+43671.sorted.bam
+Average depth: 6.46254
+
+45049.sorted.bam
+Average depth: 17.7362
+
+45309.sorted.bam
+Average depth: 17.148
+
+48819.sorted.bam
+Average depth: 23.6048
+
+48828.sorted.bam
+Average depth: 13.3199
+
+49804.sorted.bam
+Average depth: 17.7191
+
+49805.sorted.bam
+Average depth: 16.1392
+
+49806.sorted.bam
+Average depth: 8.82031
+
+50753.sorted.bam
+Average depth: 10.3148
+
+50930.sorted.bam
+Average depth: 9.12659
+
+51747.sorted.bam
+Average depth: 6.96313
+
+53078.sorted.bam
+Average depth: 6.53968
+
+6014.sorted.bam
+Average depth: 8.97837
+
+6015.sorted.bam
+Average depth: 13.5342
+
+6016.sorted.bam
+Average depth: 7.67396
+
+6017.sorted.bam
+Average depth: 15.4106
+
+6018.sorted.bam
+Average depth: 9.3052
+
+6019.sorted.bam
+Average depth: 12.9235
+
+6020.sorted.bam
+Average depth: 12.3363
+
+6025.sorted.bam
+Average depth: 23.9162
+
+6026.sorted.bam
+Average depth: 31.16
+
+6027.sorted.bam
+Average depth: 20.111
+
+RK01.sorted.bam
+Average depth: 9.11409
+
+RK02.sorted.bam
+Average depth: 12.9239
+
+50930.sorted.bam
+Average depth: 9.12659
+
+51747.sorted.bam
+Average depth: 6.96313
+
+53078.sorted.bam
+Average depth: 6.53968
+
+
+
