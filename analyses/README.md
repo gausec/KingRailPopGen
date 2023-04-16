@@ -1,6 +1,11 @@
 ## Analyses
 ---
-#### King Rail Sample Populations
+### Contents
+- **Preprocessing**: A Markdown file containing Bash shell script written to assess quality, filter, and trim demultiplexed 150 bp paired-end sequencing reads.
+- **Genome_Mapping**: A Markdown file containing Bash shell script for mapping reads to a reference genome.
+- **ANGSD**: A Markdown file containing
+---
+### King Rail Sample Populations
 <img
   src="KIRA_SampleMap.jpg" 
   alt="Sample source locations"
