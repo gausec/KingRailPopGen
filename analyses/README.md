@@ -1,5 +1,4 @@
-## SNP filtering & variant calling
-> I will be using [ANGSD (Analysis of next generation Sequencing Data)](http://www.popgen.dk/angsd/index.php/ANGSD) to do a comparative analysis of four geographically distinct populations of king rails. This will involve variant calling, genetic differentiation (FST) analysis, and estimating nucleotide diversity (π).
+## Analyses
 ---
 #### King Rail Sample Populations
 <img
