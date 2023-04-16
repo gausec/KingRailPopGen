@@ -8,18 +8,30 @@ I am interested in comparing four geographically separate king rail populations 
 
 ***
 ### Repo Contents
-- **Preprocessing**: A Markdown file containing Bash shell script written to assess quality, filter, and trim demultiplexed 150 bp paired-end sequencing reads.
-- **Genome_Mapping**: A Markdown file containing Bash shell script for mapping reads to a reference genome.
+- **analyses**: A collection of subdirectories containing analysis information.
+- **bin**: 
+  - **Average_Depth.sh**: A bash shell script to calculate average depth accross a genome written by Carol Gause
+  - **MapAndSort.sh**:  A bash shell script to map fastq files to a reference genome and sort the output bam file written by Carol Gause
+  - **bcftools.sh**: A bash shell script to
+  - **flagstat.sh**: A bash shell script to
+- **results**: A
 - **VirginiaRailPhylo**: A Markdown file with Bash shell and R script for a phylogenetic comparison project using our Virigina rail genomes. This project was completed in collaboration with Megan Linke (East Carolina University M.S. student).
 ***
 
+### Contributor  
+Carol Gause  
+
+---
 ### Funding Sources
 Grant funding for this project was generously awarded by The Garden Club of America, The Carolina Bird Club, and The Association of Field Ornithologists.
 
-***
-
-### Contributors
-Carol Gause
+---    
+### Thank you  
+Thank you to our collaborators who graciously provided us with samples:
+- [Jessica Schmit, U.Ark.](https://www1.usgs.gov/coopunits/staff/2354999)
+- [Dr. Dustin Brewer, U. Central Michigan](https://www.researchgate.net/profile/Dustin-Brewer-2)
+- [Dr. Elisa Elizondo, U.Del.](https://www.researchgate.net/profile/Elisa-Elizondo)
+- [Dr. Andrew Kratter, FL Museum of Natural Sciences](https://www.researchgate.net/profile/Andrew-Kratter)
 
 ---  
 ### Natural history & background
