@@ -6,4 +6,4 @@
 ```
 bcftools mpileup -f Rallus_crepitans_1.0.fasta -Ou -q 20 -Q 20 -C 50 -I -d 1000000 -a AD $file.sorted.bam | bcftools call -mv -Ov -f GQ -o $file_output_raw.vcf
 ```
-> *Note: I am working on the step at present. This page will be updated as I make progress.*
+> *Note: I am working on this step at present. This page will be updated as I make progress.*
