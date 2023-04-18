@@ -16,8 +16,8 @@
 Note: The number of individual samples from each population was limited by funding and the number of king rails captured. King rails are difficult to capture [due to their secretive nature](https://www.pgc.pa.gov/Wildlife/EndangeredandThreatened/Pages/KingRail.aspx), and so we are very fortuneate to have received samples from our collaborators (listed below).
 
 ---    
-### Thank you  
-Thank you to our collaborators who graciously provided us with samples:
+### Collaborators 
+Our collaborators who graciously provided samples are listed below:
 - [Jessica Schmit, U.Ark.](https://www1.usgs.gov/coopunits/staff/2354999)
 - [Dr. Dustin Brewer, U. Central Michigan](https://www.researchgate.net/profile/Dustin-Brewer-2)
 - [Dr. Elisa Elizondo, U.Del.](https://www.researchgate.net/profile/Elisa-Elizondo)
