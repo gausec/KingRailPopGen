@@ -15,7 +15,7 @@ I am interested in comparing four geographically separate king rail populations 
   - **bcftools.sh**: A bash shell script to create a VCF file containing variant calls from a BAM file.
   - **flagstat.sh**: A bash shell script to append the names of BAM files to a text file and executes samtools flagstat on each of them. It then adds the output to the same text file.
 - **results**: A collection of subdirectories containing outputs of pre-processing steps and analyses
-- **VirginiaRailPhylo**: A Markdown file with Bash shell and R script for a phylogenetic comparison project using our Virigina rail genomes. This project was completed in collaboration with Megan Linke (East Carolina University M.S. student).
+
 ***
 
 ### Contributor  
