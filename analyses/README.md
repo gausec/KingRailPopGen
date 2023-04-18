@@ -3,7 +3,7 @@
 ### Contents
 - **Preprocessing**: A Markdown file containing Bash shell script written to assess quality, filter, and trim demultiplexed 150 bp paired-end sequencing reads.
 - **Genome_Mapping**: A Markdown file containing Bash shell script for mapping reads to a reference genome.
-- **ANGSD**: A Markdown file containing
+- **ANGSD**: A Markdown file with what I am working on currently.
 ---
 ### King Rail Sample Populations
 <img
