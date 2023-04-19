@@ -35,7 +35,7 @@ for file in *.bam; do echo "Sorting ${file}"; samtools sort -@ 40 -T temp_dir ${
  
 #### 5. Determine average depth
 ```
-for file in *.bam; do echo "$file" >> AvgDepth.txt; samtools depth $file | awk '{sum+=$3} END {print "Average depth:", sum/NR}' >> AvgDepth.txt;  echo "" >> AvgDepth.txt; done
+for file in *.sorted.bam; do echo "$file" >> AvgDepth.txt; samtools depth $file | awk '{sum+=$3} END {print "Average depth:", sum/NR}' >> AvgDepth.txt;  echo "" >> AvgDepth.txt; done
 ```
 *This loop prints the filename to a text file named AvgDepth.txt, runs samtools depth on the file & pipes the output to 'awk' to calculate the average depth and outputs it to the same text file. It then prints an empty line to separate the text. The loop ends when all the .bam files have been processed.* 
 
