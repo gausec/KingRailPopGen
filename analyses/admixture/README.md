@@ -6,16 +6,20 @@
 ```
 ls BAM/*.bam > bam_list.txt
 ```
-### Calculate the allele frequencies
+### Distribution of genetic variation in a population
 ```
 angsd -bam bam_list.txt -doMajorMinor 1 -doMaf 1 -GL 2 -out allele.out
 ```
+- `-bam`: Specifies the input bam file list
+- `-doMajorMinor`: Major and minor alleles based on genotype likelihoods
+- `-doMaf`: Site frequency spectrum (SFS) based on major and minor allele frequencies
+- `-GL`: Sets genotype likelihood model (2 = GATK).
+- `-out`: Output file
+
 ### ABBABABA test
 ```
 angsd -bam bam_list.txt -doAbbababa 1 -anc CLRA.fasta -max_depth 1000 -min_maf 0.05 -block_size 5000000 -remove_bads 1 -out output
 ```
-- `-bam`: Specifies the input bam file list
 - `-doAbbababa`: Enables the abbababa test
 - `-anc`: Specifies the reference genome file
-- `-out`: Specifies the name of output 
 
