@@ -6,6 +6,7 @@
 ```
 ls BAM/*.bam > bam_list.txt
 ```
+---
 2. Distribution of genetic variation in a population
 ```
 angsd -bam bam_list.txt -doMajorMinor 1 -doMaf 1 -GL 2 -out allele.out
@@ -15,7 +16,8 @@ angsd -bam bam_list.txt -doMajorMinor 1 -doMaf 1 -GL 2 -out allele.out
 - `-doMaf`: Site frequency spectrum (SFS) based on major and minor allele frequencies
 - `-GL`: Sets genotype likelihood model (2 = GATK).
 - `-out`: Output file
-
+---
+  
 3. ABBABABA test
 ```
 angsd -bam bam_list.txt -doAbbababa 1 -anc CLRA.fasta -max_depth 1000 -min_maf 0.05 -block_size 5000000 -remove_bads 1 -out output
