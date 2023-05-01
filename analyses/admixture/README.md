@@ -1,9 +1,16 @@
 ## Estimating admixture using an ABBABABA test (D-statistic) 
----
-### Create a file that has all bam files in it
+
+--- 
+
+### Make bam file list
 ```
-angsd -bam bam_list.txt -doMajorMinor 1 -doMaf 1 -GL 2 -out 
+ls BAM/*.bam > bam_list.txt
 ```
+### Calculate the allele frequencies
+```
+angsd -bam bam_list.txt -doMajorMinor 1 -doMaf 1 -GL 2 -out allele.out
+```
+### ABBABABA test
 ```
 angsd -bam bam_list.txt -doAbbababa 1 -anc CLRA.fasta -max_depth 1000 -min_maf 0.05 -block_size 5000000 -remove_bads 1 -out output
 ```
