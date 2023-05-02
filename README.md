@@ -20,8 +20,8 @@ I am interested in comparing four geographically separate king rail populations 
 ***
 
 ### Contributors  
-Carol Gause 
-Megan Linke
+- [Carol Gause](http://www.balalab.com/people.html)   
+- [Megan Linke](https://www.ecubgsa.com/officers)
 
 ---
 ### Funding Sources
