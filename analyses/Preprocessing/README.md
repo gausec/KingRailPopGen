@@ -1,5 +1,5 @@
 # Preprocessing for FastQ files
-> This subdirectory contains steps for the preprocessing of paired-end whole genome data of 4 species (king rail, clapper rail, Virginia rail, and eastern bluebird). All steps below occured in the command line once the original WGS data was saved to an external hard drive. The forward and reverse fastq files were grouped into two separate tar files.
+> This subdirectory contains steps for the preprocessing of paired-end whole genome data of 4 species (king rail, clapper rail, Virginia rail, and eastern bluebird). All steps below occured in the command line once the original WGS data was saved to an external hard drive. The forward and reverse fastq files were in two separate tar files.
 ---
 ### Step 1: File transfer, extraction, and organization
 
