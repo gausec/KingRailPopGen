@@ -1,12 +1,14 @@
-## Estimating admixture using the ABBABABA test (D-statistic) 
+## Estimating admixture using the ABBABABA test (D-statistic) in [ANGSD](http://www.popgen.dk/angsd/index.php/Abbababa#Jackknife)
 
 --- 
 
-1. Make bam file list
+
+1. Make a list of the bam files (one individual from each population)
 ```
 ls BAM/*.bam > bam_list.txt
 ```
 ---
+  
   
 2. ABBABABA test
 ```
@@ -15,6 +17,8 @@ angsd -bam bam_list.txt -doAbbababa 1 -anc CLRA.fasta -max_depth 1000 -min_maf 0
 - `-doAbbababa`: Enables the abbababa test
 - `-anc`: Specifies the reference genome file
 ---
+
+
 3. JackKnife
 ```
 Rscript jackKnife.R file=output.abbababa indNames=bam_list.txt outfile=out
