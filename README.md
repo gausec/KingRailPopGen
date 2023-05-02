@@ -19,8 +19,9 @@ I am interested in comparing four geographically separate king rail populations 
 
 ***
 
-### Contributor  
-Carol Gause  
+### Contributors  
+Carol Gause 
+Megan Linke
 
 ---
 ### Funding Sources
