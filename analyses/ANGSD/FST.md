@@ -1,9 +1,8 @@
-# Fst
 
+### Aim: 
+I will be using ANGSD to estimate [Fst](http://www.popgen.dk/angsd/index.php/Fst) between populations.
 ---
 
-### I will be using ANGSD to calculated [Fst](http://www.popgen.dk/angsd/index.php/Fst)
----
 ### 1. SFS estimation for each population
 1.1 Create a text file list of bam files for each population. These can be found in the data subdirectory. 
 - NC_list.txt
@@ -16,3 +15,6 @@
 angsd -b AR_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 1 -doSaf 1 -out FST/SFS.AR
 ```
 *Repeat for the other 3 populations.*
+
+---
+### 2.
