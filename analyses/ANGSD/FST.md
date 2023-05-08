@@ -18,6 +18,8 @@
 &nbsp; 1.2 Generate site allele frequency likelihoods in SAF format for each population.
 ```
 angsd -b AR_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 1 -doSaf 1 -out FST/SFS.AR
+
+angsd -b OH_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 1 -doSaf 1 -out FST/SFS.OH: angsd -b NC_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 1 -doSaf 1 -out FST/SFS.NC: angsd -b FL_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 1 -doSaf 1 -out FST/SFS.FL
 ```
 
 &nbsp; *Repeat for the other 3 populations.*
@@ -28,17 +30,9 @@ angsd -b AR_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 1 -doSaf 1 -o
 
 #### 2. Use [RealSFS](http://www.popgen.dk/angsd/index.php/RealSFS) to calculate 2d sfs for each pair of populations
 ```
-realSFS SFS.AR.saf.idx SFS.NC.saf.idx > AR_NC.sfs
-realSFS SFS.AR.saf.idx SFS.OH.saf.idx > AR_OH.sfs
-realSFS SFS.AR.saf.idx SFS.FL.saf.idx > AR_FL.sfs
-realSFS SFS.NC.saf.idx SFS.OH.saf.idx > NC_OH.sfs
-realSFS SFS.NC.saf.idx SFS.FL.saf.idx > NC_FL.sfs
-realSFS SFS.OH.saf.idx SFS.FL.saf.idx > OH_FL.sfs
-
+realSFS SFS.AR.saf.idx SFS.NC.saf.idx > AR_NC.sfs; realSFS SFS.AR.saf.idx SFS.OH.saf.idx > AR_OH.sfs; realSFS SFS.AR.saf.idx SFS.FL.saf.idx > AR_FL.sfs; realSFS SFS.NC.saf.idx SFS.OH.saf.idx > NC_OH.sfs; realSFS SFS.NC.saf.idx SFS.FL.saf.idx > NC_FL.sfs; realSFS SFS.OH.saf.idx SFS.FL.saf.idx > OH_FL.sfs
 
 ```
-
-*Repeat for each pair of populations*
 
 ---
 #### 3. Use the above calculated 2dsfs as priors jointly with all safs from step1 to calculate fst binary files
