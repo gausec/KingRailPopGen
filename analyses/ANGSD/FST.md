@@ -1,6 +1,6 @@
 
 ### Aim: 
-I will be using ANGSD to estimate [Fst](http://www.popgen.dk/angsd/index.php/Fst) between populations.
+#### I will be using ANGSD to estimate [Fst](http://www.popgen.dk/angsd/index.php/Fst) between populations.
 ---
 
 ### 1. SFS estimation for each population
