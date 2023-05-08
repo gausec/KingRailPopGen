@@ -4,11 +4,12 @@
 ---
 ### Steps:  
 #### 1. SFS estimation for each population
-1.1 Create a text file list of bam files for each population. These can be found in the data subdirectory. 
+1.1 Create a text file list of bam files for each population. 
 - NC_list.txt
 - OH_list.txt
 - AR_list.txt
 - FL_list.txt
+*These can be found in the data subdirectory.*
 
 1.2 Generate site allele frequency likelihoods in SAF format for each population.
 ```
