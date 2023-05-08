@@ -37,7 +37,9 @@ realSFS SFS.AR.saf.idx SFS.NC.saf.idx > AR_NC.sfs; realSFS SFS.AR.saf.idx SFS.OH
 ---
 #### 3. Use the above calculated 2dsfs as priors jointly with all safs from step1 to calculate fst binary files
 &nbsp; 3.1
-
+```
+```
+- *I am using the* `-fold 1` *option for a single SAF file that includes all populations.*
 
 ---
 #### 4. Use realSFS to extract the the fst values from the fst binary files
