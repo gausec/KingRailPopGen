@@ -8,7 +8,8 @@
 - NC_list.txt
 - OH_list.txt
 - AR_list.txt
-- FL_list.txt
+- FL_list.txt  
+
 *These can be found in the data subdirectory.*
 
 1.2 Generate site allele frequency likelihoods in SAF format for each population.
