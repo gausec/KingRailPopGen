@@ -13,7 +13,7 @@
   style="display: inline-block; margin: 0 auto; max-width: 300px">  
   
 [*Range map created by the Audubon Society*](https://www.audubon.org/field-guide/bird/king-rail)     
-Note: Sample numbers were constrained by funding and the number of king rails captured. King rails are difficult to capture [due to their secretive nature](https://www.pgc.pa.gov/Wildlife/EndangeredandThreatened/Pages/KingRail.aspx), and so we are very fortuneate to have received the samples we did from our collaborators (listed below).
+Note: Sample numbers were constrained by funding and the number of king rails captured. King rails are difficult to capture [due to their secretive nature](https://www.pgc.pa.gov/Wildlife/EndangeredandThreatened/Pages/KingRail.aspx), and so we are very fortunate to have received the samples we did from our collaborators (listed below).
 
 ---    
 ### Collaborators 
