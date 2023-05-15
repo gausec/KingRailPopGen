@@ -1,5 +1,5 @@
 # Mapping Reads to a Reference Genome
-> I am using the [Burrows-Wheeler Aligner (BWA)](https://github.com/lh3/bwa), a software tool commonly used for short read alignment to a reference genome. I will be using a [high quality clapper rail genome](https://figshare.com/articles/dataset/A_high_quality_de_novo_genome_assembly_for_Clapper_Rail_Rallus_crepitans_/21983261) (*Rallus crepitans*) to align 57 king rail (*Rallus elegans*) whole genomes. These species are sister taxa. 
+> I am using the [Burrows-Wheeler Aligner (BWA)](https://github.com/lh3/bwa), a software tool commonly used for short read alignment to a reference genome. I will be using a [high quality clapper rail genome](https://www.ncbi.nlm.nih.gov/assembly/GCA_028554615.1/) (*Rallus crepitans*) to align 57 king rail (*Rallus elegans*) whole genomes. These species are sister taxa. 
 
 
 ## Steps:
