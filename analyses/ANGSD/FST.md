@@ -28,12 +28,12 @@ angsd -b AR_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 1 -doSaf 1 -n
 
 #### 2. Use [RealSFS](http://www.popgen.dk/angsd/index.php/RealSFS) to calculate 2d sfs for each pair of populations
 ```
-realSFS SFS.AR.saf.idx SFS.NC.saf.idx > AR_NC.ml;
-realSFS SFS.AR.saf.idx SFS.OH.saf.idx > AR_OH.ml; 
-realSFS SFS.AR.saf.idx SFS.FL.saf.idx > AR_FL.ml; 
-realSFS SFS.NC.saf.idx SFS.OH.saf.idx > NC_OH.ml; 
-realSFS SFS.NC.saf.idx SFS.FL.saf.idx > NC_FL.ml; 
-realSFS SFS.OH.saf.idx SFS.FL.saf.idx > OH_FL.ml
+realSFS SFS.AR.saf.idx SFS.NC.saf.idx -P 30 > AR_NC.ml;
+realSFS SFS.AR.saf.idx SFS.OH.saf.idx -P 30 > AR_OH.ml; 
+realSFS SFS.AR.saf.idx SFS.FL.saf.idx -P 30 > AR_FL.ml; 
+realSFS SFS.NC.saf.idx SFS.OH.saf.idx -P 30 > NC_OH.ml; 
+realSFS SFS.NC.saf.idx SFS.FL.saf.idx -P 30 > NC_FL.ml; 
+realSFS SFS.OH.saf.idx SFS.FL.saf.idx -P 30 > OH_FL.ml
 
 ```
 
