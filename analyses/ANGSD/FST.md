@@ -17,8 +17,14 @@
 
 &nbsp; 1.2 Generate site allele frequency likelihoods in SAF format for each population.
 ```
-angsd -b AR_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 1 -doSaf 1 -minMaf 0.05 -nThreads 10 -out FST/minmaf/SFS.AR
-angsd -b AR_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 1 -doSaf 1 -snp_pval 0.05 -nThreads 10 -out FST/pval/SFS.AR
+../../angsd/angsd -b FL_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 2 -doSaf 1 -minMaf 0.05 -nThreads 30 -out FST/minmaf/SFS.AR
+
+#p value
+../../angsd/angsd -b FL_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 2 -doSaf 1 -doMaf 1 -minMaf 0.05 -SNP_pval 0.05 -minind 5 -nthreads 10 -doMajorMinor 1 -out FST/minmaf/SFS.FL
+
+#Exclude minMaf
+../../angsd/angsd -b FL_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 2 -doSaf 1 -doMaf 1 -minMaf 1 -SNP_pval 0.05 -minind 5 -nthreads 20 -doMajorMinor 1 -out FST/pval/SFS.FL
+
 
 ```
 
