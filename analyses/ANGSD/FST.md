@@ -18,13 +18,16 @@
 &nbsp; 1.2 Generate site allele frequency likelihoods in SAF format for each population.
 ```
 # No minMaf or SNP_pval
-../../angsd/angsd -b FL_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 2 -doSaf 1 -nThreads 30 -out SFS.gl2.FL
+../../angsd/angsd -b FL_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 2 -doSaf 1 -nThreads 8 -out SFS.gl2.FL
 
-# minMaf & SNP_pval 
-../../angsd/angsd -b FL_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 2 -doSaf 1 -doMaf 1 -minMaf 0.05 -SNP_pval 0.05 -minind 5 -nthreads 10 -doMajorMinor 1 -out FST/minmaf/SFS.FL
+# minMaf 0.05 & SNP_pval 0.05
+../../angsd/angsd -b FL_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 2 -doSaf 1 -doMaf 1 -minMaf 0.05 -SNP_pval 0.05 -minind 5 -nthreads 8 -doMajorMinor 1 -out FST/minmaf0.05pval0.05/SFS.FL
 
-# Exclude minMaf / only pval
-../../angsd/angsd -b FL_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 2 -doSaf 1 -doMaf 1 -minMaf 1 -SNP_pval 0.05 -minind 5 -nthreads 20 -doMajorMinor 1 -out FST/pval/SFS.FL
+# minMaf 0.5 & SNP_pval 0.05
+../../angsd/angsd -b FL_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 2 -doSaf 1 -doMaf 1 -minMaf 0.5 -SNP_pval 0.05 -minind 5 -nthreads 8 -doMajorMinor 1 -out FST/minmaf0.5pval0.05/SFS.FL
+
+# Exclude pval, minmaf 0.05
+../../angsd/angsd -b FL_list.txt -anc CLRAindex/Rallus_crepitans_1.0.fasta -gl 2 -doSaf 1 -doMaf 1 -minMaf 0.05 -SNP_pval 1 -minind 5 -nthreads 8 -doMajorMinor 1 -out FST/minmaf0.05pval1/SFS.FL
 
 
 ```
