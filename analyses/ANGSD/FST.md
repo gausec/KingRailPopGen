@@ -29,12 +29,12 @@
 
 #### 2. Use [RealSFS](http://www.popgen.dk/angsd/index.php/RealSFS) to calculate 2d sfs for each pair of populations
 ```
-../../../angsd/misc/realSFS SFS.AR.saf.idx SFS.NC.saf.idx -P 30 > AR_NC.ml;
-../../../angsd/misc/realSFS SFS.AR.saf.idx SFS.OH.saf.idx -P 30 > AR_OH.ml; 
-../../../angsd/misc/realSFS SFS.AR.saf.idx SFS.FL.saf.idx -P 30 > AR_FL.ml; 
-../../../angsd/misc/realSFS SFS.NC.saf.idx SFS.OH.saf.idx -P 30 > NC_OH.ml; 
-../../../angsd/misc/realSFS SFS.NC.saf.idx SFS.FL.saf.idx -P 30 > NC_FL.ml; 
-../../../angsd/misc/realSFS SFS.OH.saf.idx SFS.FL.saf.idx -P 30 > OH_FL.ml
+../../../angsd/misc/realSFS AR/SFS.gl2.AR.saf.idx NC/SFS.NC.saf.idx -P 30 > AR_NC.ml;
+../../../angsd/misc/realSFS AR/SFS.gl2.AR.saf.idx OH/SFS.OH.saf.idx -P 30 > AR_OH.ml; 
+../../../angsd/misc/realSFS AR/SFS.gl2.AR.saf.idx FL/SFS.FL.saf.idx -P 30 > AR_FL.ml; 
+../../../angsd/misc/realSFS SFS.NC.saf.idx OH/SFS.OH.saf.idx -P 30 > NC_OH.ml; 
+../../../angsd/misc/realSFS SFS.NC.saf.idx FL/SFS.FL.saf.idx -P 30 > NC_FL.ml; 
+../../../angsd/misc/realSFS SFS.OH.saf.idx FL/SFS.FL.saf.idx -P 30 > OH_FL.ml
 
 ```
 
