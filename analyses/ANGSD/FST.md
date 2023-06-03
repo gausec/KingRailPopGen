@@ -32,9 +32,9 @@
 ../../../angsd/misc/realSFS AR/SFS.gl2.AR.saf.idx NC/SFS.NC.saf.idx -P 30 > AR_NC.ml;
 ../../../angsd/misc/realSFS AR/SFS.gl2.AR.saf.idx OH/SFS.OH.saf.idx -P 30 > AR_OH.ml; 
 ../../../angsd/misc/realSFS AR/SFS.gl2.AR.saf.idx FL/SFS.FL.saf.idx -P 30 > AR_FL.ml; 
-../../../angsd/misc/realSFS SFS.NC.saf.idx OH/SFS.OH.saf.idx -P 30 > NC_OH.ml; 
-../../../angsd/misc/realSFS SFS.NC.saf.idx FL/SFS.FL.saf.idx -P 30 > NC_FL.ml; 
-../../../angsd/misc/realSFS SFS.OH.saf.idx FL/SFS.FL.saf.idx -P 30 > OH_FL.ml
+../../../angsd/misc/realSFS NC/SFS.NC.saf.idx OH/SFS.OH.saf.idx -P 30 > NC_OH.ml; 
+../../../angsd/misc/realSFS NC/SFS.NC.saf.idx FL/SFS.FL.saf.idx -P 30 > NC_FL.ml; 
+../../../angsd/misc/realSFS OH/SFS.OH.saf.idx FL/SFS.FL.saf.idx -P 30 > OH_FL.ml
 
 ```
 
