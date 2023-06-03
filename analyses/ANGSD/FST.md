@@ -5,7 +5,7 @@
 ---
 ### Steps:  
 #### 1. SFS estimation for each population
-&nbsp; 1.1 Create a text file list of bam files for each population. 
+&nbsp; 1.1 Create a text file list of bam files for each population
 - NC_list.txt
 - OH_list.txt
 - AR_list.txt
@@ -40,7 +40,7 @@
 
 ---
 #### 3.  For computing the pairwise fst, ANGSD reccomends performing pairwise FST calculations for each population separately. Generate separate `.fst` files for each pairwise population comparison
-&nbsp; 3.1
+&nbsp; 
 ```
 ../../../angsd/misc/realSFS fst index AR/SFS.gl2.AR.saf.idx NC/SFS.NC.saf.idx -sfs AR_NC.ml -fstout FstOut.AR_NC;
 ../../../angsd/misc/realSFS fst index AR/SFS.gl2.AR.saf.idx OH/SFS.OH.saf.idx -sfs AR_OH.ml -fstout FstOut.AR_OH;
@@ -54,7 +54,7 @@
 
 ---
 #### 4. Use realSFS to extract the the fst values from the fst binary files
-&nbsp; 4.1
+&nbsp;
 ```
 ../../../angsd/misc/realSFS fst stats FstOut.AR_NC.fst.idx > FstOut.AR_NC.fst;
 ../../../angsd/misc/realSFS fst stats FstOut.AR_OH.fst.idx > FstOut.AR_OH.fst;
