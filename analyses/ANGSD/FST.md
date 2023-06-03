@@ -39,14 +39,30 @@
 ```
 
 ---
-#### 3. Use the above calculated 2dsfs as priors jointly with all safs from step1 to calculate fst binary files
+#### 3.  For computing the pairwise fst, ANGSD reccomends performing pairwise FST calculations for each population separately. Generate separate `.fst` files for each pairwise population comparison
 &nbsp; 3.1
 ```
+../../../angsd/misc/realSFS fst index AR/SFS.gl2.AR.saf.idx NC/SFS.NC.saf.idx -sfs AR_NC.ml -fstout FstOut.AR_NC;
+../../../angsd/misc/realSFS fst index AR/SFS.gl2.AR.saf.idx OH/SFS.OH.saf.idx -sfs AR_OH.ml -fstout FstOut.AR_OH;
+../../../angsd/misc/realSFS fst index AR/SFS.gl2.AR.saf.idx FL/SFS.FL.saf.idx -sfs AR_FL.ml -fstout FstOut.AR_FL;
+../../../angsd/misc/realSFS fst index NC/SFS.NC.saf.idx OH/SFS.OH.saf.idx -sfs NC_OH.ml -fstout FstOut.NC_OH;
+../../../angsd/misc/realSFS fst index NC/SFS.NC.saf.idx FL/SFS.FL.saf.idx -sfs NC_FL.ml -fstout FstOut.NC_FL;
+../../../angsd/misc/realSFS fst index OH/SFS.OH.saf.idx FL/SFS.FL.saf.idx -sfs OH_FL.ml -fstout FstOut.OH_FL
+
 ```
-- *I am using the* `-fold 1` *option for a single SAF file that includes all populations.*
+- *These files contain the pairwise FST values.*
 
 ---
 #### 4. Use realSFS to extract the the fst values from the fst binary files
 &nbsp; 4.1
+```
+../../../angsd/misc/realSFS fst stats FstOut.AR_NC.fst.idx > FstOut.AR_NC.fst;
+../../../angsd/misc/realSFS fst stats FstOut.AR_OH.fst.idx > FstOut.AR_OH.fst;
+../../../angsd/misc/realSFS fst stats FstOut.AR_FL.fst.idx > FstOut.AR_FL.fst;
+../../../angsd/misc/realSFS fst stats FstOut.NC_OH.fst.idx > FstOut.NC_OH.fst;
+../../../angsd/misc/realSFS fst stats FstOut.NC_FL.fst.idx > FstOut.NC_FL.fst;
+../../../angsd/misc/realSFS fst stats FstOut.OH_FL.fst.idx > FstOut.OH_FL.fst
+
+```
 
 
