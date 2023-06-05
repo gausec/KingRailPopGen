@@ -12,5 +12,5 @@
 ```
 2. Run PCAngsd
 ```
-python pcangsd.py -beagle ../../PCA/input.beagle.gz -out output -threads 64
+python pcangsd.py -beagle ../../PCA/input.beagle.gz -out output -threads 10
 ```
