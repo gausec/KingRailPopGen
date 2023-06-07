@@ -1,7 +1,9 @@
+&nbsp;
 ## Principal component analysis
-#### I am using principal component analysis through [PCAngsd](http://www.popgen.dk/software/index.php/PCAngsd) to better understand population structure.
+#### I am using principal component analysis through [PCAngsd](http://www.popgen.dk/software/index.php/PCAngsd) to better understand population structure. 
 ---
 &nbsp;
+
 ### Steps in the command line: 
 #### 1. Prepare input data by obtaining genotype likelihoods in Beagle format from BAM files
 ```
