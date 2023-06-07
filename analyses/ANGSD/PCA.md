@@ -32,17 +32,17 @@ library(ggplot2)
 library(readr)
 ```
 
-# 2. Set working directory
+#### 2. Set working directory
 ```{r}
 setwd("C:/Users/CarolPC/Documents")
 ```
 
-# 3. Data
+#### 3. Data
 ```{r}
 cov_matrix <- read.table("output.pcangsd.cov", header = TRUE)
 ```
 
-# 4. Visualize
+#### 4. Visualize
 ```{r}
 
 ```
