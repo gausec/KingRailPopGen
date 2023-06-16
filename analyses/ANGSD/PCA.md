@@ -22,7 +22,7 @@ pip3 install -e .
 ```
 ##### &nbsp; 2.2 Perform principal component analysis on the genoltype liklihood beagle files
 ```
-pcangsd -b AR_genolike.beagle.gz -b FL_genolike.beagle.gz -b NC_genolike.beagle.gz -b OH_genolike.beagle.gz -t 20 -o output.pcangsd
+pcangsd -b AR_genolike.beagle.gz -b FL_genolike.beagle.gz -b NC_genolike.beagle.gz -b OH_genolike.beagle.gz -sites ../WholeGenomes/SortedBAM/PopInfo.txt -t 20 -o output.pcangsd
 ```
 ---
 &nbsp;
@@ -41,7 +41,7 @@ setwd("C:/Users/CarolPC/Documents")
 
 #### 3. Data
 ```{r}
-cov_matrix <- read.table("output.pcangsd.cov", header = TRUE)
+cov_matrix <- as.matrix(read.table("output.pcangsd.cov", header = TRUE))
 ```
 
 #### 4. Visualize
