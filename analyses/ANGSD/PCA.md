@@ -1,6 +1,6 @@
 &nbsp;
 ## Principal component analysis
-#### I am using principal component analysis through [PCAngsd](http://www.popgen.dk/software/index.php/PCAngsd) to better understand population structure. 
+#### I am completing a principal component analysis using [PCAngsd](http://www.popgen.dk/software/index.php/PCAngsd) to better understand population structure. 
 ---
 &nbsp;
 
