@@ -1,0 +1,17 @@
+../Wholegenomes/SortedBam/43621.sorted.bam
+../Wholegenomes/SortedBam/43633.sorted.bam
+../Wholegenomes/SortedBam/43639.sorted.bam
+../Wholegenomes/SortedBam/43646.sorted.bam
+../Wholegenomes/SortedBam/43647.sorted.bam
+../Wholegenomes/SortedBam/43649.sorted.bam
+../Wholegenomes/SortedBam/43654.sorted.bam
+../Wholegenomes/SortedBam/43670.sorted.bam
+../Wholegenomes/SortedBam/43671.sorted.bam
+../Wholegenomes/SortedBam/RK01.sorted.bam
+../Wholegenomes/SortedBam/RK02.sorted.bam
+../Wholegenomes/SortedBam/48828.sorted.bam
+../Wholegenomes/SortedBam/43613.sorted.bam
+../Wholegenomes/SortedBam/43617.sorted.bam
+../Wholegenomes/SortedBam/43623.sorted.bam
+../Wholegenomes/SortedBam/43657.sorted.bam
+../Wholegenomes/SortedBam/48819.sorted.bam

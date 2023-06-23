@@ -1,0 +1,15 @@
+../Wholegenomes/SortedBam/43215.sorted.bam
+../Wholegenomes/SortedBam/45049.sorted.bam
+../Wholegenomes/SortedBam/45309.sorted.bam
+../Wholegenomes/SortedBam/49804.sorted.bam
+../Wholegenomes/SortedBam/49805.sorted.bam
+../Wholegenomes/SortedBam/49806.sorted.bam
+../Wholegenomes/SortedBam/50753.sorted.bam
+../Wholegenomes/SortedBam/50930.sorted.bam
+../Wholegenomes/SortedBam/51747.sorted.bam
+../Wholegenomes/SortedBam/53078.sorted.bam
+
+
+
+
+
