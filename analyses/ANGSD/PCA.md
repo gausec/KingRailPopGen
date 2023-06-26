@@ -35,8 +35,6 @@ pcangsd -b genolike.beagle.gz --sites_save -t 20 -o output.pcangsd
 ```{r}
 library(ggplot2)
 library(readr)
-library(ggcorrplot)
-library(FactoMineR)
 library(RColorBrewer)
 ```
 
@@ -80,8 +78,8 @@ pca.vectors <- data.frame(pop, V1 = transformed_data[, 1], V2 = transformed_data
 ```{r}
 pca <- ggplot(data = pca.vectors, aes(x = V1, y = V2, colour = Location, label = Sample_ID)) + 
   geom_point() + 
-  labs(title = "Attempt 5...or 10? idk anymore", x = "PC1", y = "PC2") + 
-  theme(plot.title = element_text(face = "italic"))
+  labs(title = "Individual Allele Frequency", x = "PC1", y = "PC2") + 
+  theme(plot.title = element_text(face = "bold"))
 
 plot(pca)
 ```
