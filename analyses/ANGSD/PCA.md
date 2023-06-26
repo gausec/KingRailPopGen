@@ -30,7 +30,7 @@ pcangsd -b genolike.beagle.gz --sites_save -t 20 -o output.pcangsd
 ---
 &nbsp;
 
-### Steps in R
+### Steps in R:
 #### 1. Load packages
 ```{r}
 library(ggplot2)
