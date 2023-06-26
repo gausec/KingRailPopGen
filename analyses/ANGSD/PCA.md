@@ -55,7 +55,7 @@ cov_matrix <- as.matrix(read.table("output.pcangsd.cov", header = FALSE))
 pop<-read.csv("PopInfo.csv", header = FALSE)
 colnames(pop) <- c("Sample_ID","Location")
 ```
-#### 4. ID principal components. Compute the eigenvalues from covariance matrix with eigen
+#### 4. ID principal components. Compute the eigenvalues from covariance matrix with `eigen`
 ```{r}
 e<-eigen(cov_matrix)
 # eigenvalue -> a number representing the amount of variance present in the data for a given direction.
