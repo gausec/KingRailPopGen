@@ -6,11 +6,11 @@
 
 ### Steps in the command line: 
 #### 1. Prepare input data by obtaining genotype likelihoods in Beagle format from BAM files
-1.1 I have a BAM file list containing samples and their population location. I would like to check that I have the right number for each population.
+##### &nbsp; 1.1 I have a BAM file list containing samples and their population location. I would like to check that I have the right number for each population.
 ```
 cut -f 1 -d " " PopInfo | sort | uniq -c
 ```
-1.2 Obtain genotype likelihoods in Beagle format
+##### &nbsp; 1.2 Obtain genotype likelihoods in Beagle format
 ```
 ../../angsd/angsd -GL 2 -out ../../PCA/Agenolike -nThreads 10 -ref CLRAindex/Rallus_crepitans_1.0.fasta -doGlf 2 -doMajorMinor 1 -SNP_pval 1e-6 -doMaf 1 -bam BamFileList;
 ```
@@ -46,11 +46,11 @@ setwd("C:/Users/CarolPC/Documents")
 ```
 
 #### 3. Data
-3.1 Read in PCANGSD output covariance matrix
+##### &nbsp; 3.1 Read in PCANGSD output covariance matrix
 ```{r}
 cov_matrix <- as.matrix(read.table("output.pcangsd.cov", header = FALSE))
 ```
-3.2 Read in population info and assign column headers
+##### &nbsp; 3.2 Read in population info and assign column headers
 ```{r}
 pop<-read.csv("PopInfo.csv", header = FALSE)
 colnames(pop) <- c("Sample_ID","Location")
