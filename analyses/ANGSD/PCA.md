@@ -62,7 +62,26 @@ e<-eigen(cov_matrix)
 ```
 
 #### 5. Plot
+##### &nbsp; 5.1 Extract eigenvectors
 ```{r}
-
+eigenvectors <- as.matrix(e$vectors[, 1:2])  # Extract the first two eigenvectors
 ```
 
+##### &nbsp; 5.2 Transformed data
+```{r}
+transformed_data <- as.matrix(cov_matrix) %*% eigenvectors
+```
+
+##### &nbsp; 5.3 Combine transformed data with population information
+```{r}
+pca.vectors <- data.frame(pop, V1 = transformed_data[, 1], V2 = transformed_data[, 2])
+```
+##### &nbsp; 5.4 Plot PCA
+```{r}
+pca <- ggplot(data = pca.vectors, aes(x = V1, y = V2, colour = Location, label = Sample_ID)) + 
+  geom_point() + 
+  labs(title = "Attempt 5...or 10? idk anymore", x = "PC1", y = "PC2") + 
+  theme(plot.title = element_text(face = "italic"))
+
+plot(pca)
+```
