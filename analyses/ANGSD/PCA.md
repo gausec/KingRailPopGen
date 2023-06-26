@@ -35,6 +35,9 @@ pcangsd -b genolike.beagle.gz --sites_save -t 20 -o output.pcangsd
 ```{r}
 library(ggplot2)
 library(readr)
+library(ggcorrplot)
+library(FactoMineR)
+library(RColorBrewer)
 ```
 
 #### 2. Set working directory
@@ -43,11 +46,22 @@ setwd("C:/Users/CarolPC/Documents")
 ```
 
 #### 3. Data
+3.1 Read in PCANGSD output covariance matrix
 ```{r}
-cov_matrix <- as.matrix(read.table("output.pcangsd.cov", header = TRUE))
+cov_matrix <- as.matrix(read.table("output.pcangsd.cov", header = FALSE))
+```
+3.2 Read in population info and assign column headers
+```{r}
+pop<-read.csv("PopInfo.csv", header = FALSE)
+colnames(pop) <- c("Sample_ID","Location")
+```
+#### 4. ID principal components. Compute the eigenvalues from covariance matrix with eigen
+```{r}
+e<-eigen(cov_matrix)
+# eigenvalue -> a number representing the amount of variance present in the data for a given direction.
 ```
 
-#### 4. Visualize
+#### 5. Plot
 ```{r}
 
 ```
