@@ -60,9 +60,9 @@ e<-eigen(cov_matrix)
 ```
 
 #### 5. Plot
-##### &nbsp; 5.1 Extract eigenvectors
+##### &nbsp; 5.1 Extract the first two eigenvectors
 ```{r}
-eigenvectors <- as.matrix(e$vectors[, 1:2])  # Extract the first two eigenvectors
+eigenvectors <- as.matrix(e$vectors[, 1:2]) 
 ```
 
 ##### &nbsp; 5.2 Transformed data
