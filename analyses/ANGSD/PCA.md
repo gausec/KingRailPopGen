@@ -6,9 +6,9 @@
 
 ### Steps in the command line: 
 #### 1. Prepare input data by obtaining genotype likelihoods in Beagle format from BAM files
-##### &nbsp; 1.1 I have a file containing sample names and their population location. I would like to check that I have the right number for each population.
+##### &nbsp; 1.1 I have a file containing sample names and their population location. Each field is tab delimited. I would like to check that I have the right number for each population.
 ```
-cut -f 1 -d " " PopInfo | sort | uniq -c
+cut -f 1 -d $'\t' PopInfo.txt | sort | uniq -c
 ```
 ##### &nbsp; 1.2 Obtain genotype likelihoods in Beagle format
 ```
