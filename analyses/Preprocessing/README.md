@@ -34,11 +34,7 @@ mkdir reports
 for FileName in *_R1_001.fastq.gz; do ls $FileName; done   
 for FileName in *_R2_001.fastq.gz; do ls $FileName; done 
 ```
-2.2 Use the `cut` command to extract the first field of the filename before the first _ character, store it as the variable `name`, and print it out for each file using the `echo` command. I'm doing this because I want to rename my output files by their shorter sample names. I am using echo to see if the command worked correctly.
-```
-for FileName in *_R1_001.fastq.gz; do name=`ls $FileName | cut -d"_" -f1`; echo $name; done 
-```
-2.3 Use a loop to run the `fastp` command (without changing default quality parameters) for all fastq files. This command specifies the input files for both the forward (`-i`) and reverse (`-I`) reads, as well as the output files for the processed reads (`-o` and `-O`).  
+2.2 Use the `cut` command to extract the first field of the filename before the first _ character, store it as the variable `name`, and print it out for each file using the `echo` command. I'm doing this because I want to rename my output files by their shorter sample names. Use a loop to run the `fastp` command (without changing default quality parameters) for all fastq files. This command specifies the input files for both the forward (`-i`) and reverse (`-I`) reads, as well as the output files for the processed reads (`-o` and `-O`).  
 ```
 for FileName in *_R1_001.fastq.gz; do name=$(echo $FileName | cut -d"_" -f1); base=$(basename $FileName _R1_001.fastq.gz); fastp -i $name*_R1_001.fastq.gz -I $name*_R2_001.fastq.gz -o cleaned/${base}-R1.fastq.gz -O cleaned/${base}-R2.fastq.gz --html reports/${base}.html --json reports/${base}.json ; done
 
