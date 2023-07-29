@@ -29,14 +29,14 @@ mkdir reports
 ---
 ### Step 2: Quality control
 
-2.1 Rename files to simplify downstream tasks: 
+2.1 Rename files to simplify downstream tasks. Use the `cut` command to extract the first 5 characters of the file name, and store it as the variable `name`.
 ```
 for FileName in *_R1_001.fastq.gz; do name=$(echo "$FileName" | cut -c1-5); mv "$FileName" "${name}_R1.fastq.gz"; done
 ```
 ```
 for FileName in *_R2_001.fastq.gz; do name=$(echo "$FileName" | cut -c1-5); mv "$FileName" "${name}_R2.fastq.gz"; done  
 ```
-2.2 Use the `cut` command to extract the first field of the filename before the first _ character, store it as the variable `name`, and print it out for each file using the `echo` command. I'm doing this because I want to rename my output files by their shorter sample names. Use a loop to run the `fastp` command (without changing default quality parameters) for all fastq files. This command specifies the input files for both the forward (`-i`) and reverse (`-I`) reads, as well as the output files for the processed reads (`-o` and `-O`).  
+2.2 Use a for loop to run the `fastp` command (without changing default quality parameters) for all fastq files. This command specifies the input files for both the forward (`-i`) and reverse (`-I`) reads, as well as the output files for the processed reads (`-o` and `-O`).  
 
 ```
 for FileName in *_R1.fastq.gz; do name=$(echo $FileName | cut -c1-5); fastp -i $name*_R1.fastq.gz -I $name*_R2.fastq.gz -o cleaned/$name*-clean-R1.fastq.gz -O cleaned/$name-clean-R2.fastq.gz --html reports/$name.html --json reports/$name.json; done
