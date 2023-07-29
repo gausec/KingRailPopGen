@@ -21,9 +21,8 @@ screen
 ```
 for file in *R1.fastq.gz; do base=$(basename "$file" | cut -c1-5); echo "$base"; bwa mem -t 16 index/Rallus_crepitans_1.0.fasta ${base}-R1.fastq.gz ${base}-R2.fastq.gz > SAM/${base}.sam; done
 ```
-- Next press ctrl + `a` and then press `d` to disown the process. The terminal can now be closed, and the command will finish running.
-- *Note: Above, the loop iterates through each R1 fastq file in the current directory using the wildcard `*R1.fastq.gz`. For each R1 file, the base filename is extracted using the `basename` command, and the `-R1.fastq.gz` is removed using the `-s` option. This base name is then used to make the names of the corresponding R2 file and the output SAM file.*
-- *Finally, the BWA alignment is performed using `bwa mem` with the clapper rail reference genome & input fastq files. To speed up the process, `-t` indicates I want to use 16 threads (each thread is assigned a portion of the total computing resources (like CPU time, memory) and can execute independently of each other). The output is redirected to a SAM file using the `>` operator.*
+ -  *Next use `ctrl a` and then `d` to disown the process. The terminal can now be closed, and the command will finish running.*
+ -  *BWA alignment is performed using `bwa mem` with the clapper rail reference genome & fastq files. To speed up the process, `-t` indicates I want to use 16 threads (each thread is assigned a portion of the total computing resources, such as CPU time, and can execute independently of each other). The output is redirected to a SAM file using the `>` operator.*
 
 ---
 #### 3. Convert SAM to BAM using [samtools](https://github.com/samtools/samtools) (this saves a lot of space by converting to binary data)
