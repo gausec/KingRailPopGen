@@ -12,7 +12,7 @@ cut -f 1 -d $'\t' PopInfo.txt | sort | uniq -c
 ```
 ##### &nbsp; 1.2 Obtain genotype likelihoods in Beagle format
 ```
-../../angsd/angsd -GL 2 -out ../../PCA/Agenolike -nThreads 10 -ref CLRAindex/Rallus_crepitans_1.0.fasta -doGlf 2 -doMajorMinor 1 -SNP_pval 1e-6 -doMaf 1 -bam BamFileList;
+../../angsd/angsd -GL 2 -out ../../PCA/Agenolike -nThreads 10 -ref CLRAindex/Rallus_crepitans_1.0.fasta -doGlf 2 -doMajorMinor 1 -SNP_pval 1e-6 -doMaf 1 -bam BamFileList
 ```
 
 #### 2. Run PCAngsd
