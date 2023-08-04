@@ -1,1 +1,1 @@
-This is a space for results
+This subdirectory serves as a dedicated area for storing a selection of our results.
