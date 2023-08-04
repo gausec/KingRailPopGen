@@ -83,8 +83,7 @@ pca <- ggplot(data = pca.vectors, aes(x = V1, y = V2, colour = Location, label =
 
 plot(pca)
 ```
-
 ##### &nbsp; 5.5 Save plot as a .png file
-```
+```{r}
 ggsave("pca_plot.png", plot = pca, width = 8, height = 6, dpi = 300)
 ```
