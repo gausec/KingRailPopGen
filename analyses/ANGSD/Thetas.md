@@ -8,7 +8,7 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 
 #### 1. Estimate the folded site frequency spectrum
 ```
-../../../../angsd/misc/realSFS SFS.NC.saf.idx -P 24 -fold 1 -anc ../CLRAindex/Rallus_crepitans_1.0.fasta > out.NC.sfs
+../../../../angsd/misc/realSFS SFS.NC.saf.idx -P 24 -fold 1 -anc ../../CLRAindex/Rallus_crepitans_1.0.fasta > out.NC.sfs
 ```
 &nbsp;
 
