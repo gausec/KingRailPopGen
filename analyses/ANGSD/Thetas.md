@@ -35,7 +35,7 @@
 &nbsp;
 #### 5. Extract the theta P column from the pestPG file.
 ```
-awk '{print $5}' NC.out.thetas.idx.pestPG > column_four.txt
+awk '{print $5}' NC.out.thetas.idx.pestPG > thetaP.txt
 ```
 &nbsp;
 #### 6. divided by the number of sites used for that population.
