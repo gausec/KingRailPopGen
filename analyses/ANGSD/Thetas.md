@@ -1,7 +1,7 @@
 ### I will be estimating Thetas values and other neutrality statistics using [ANGSD](http://popgen.dk/angsd/index.php/Thetas,Tajima,Neutrality_tests).
 ---
 
-> Note: This method requires a SAF file for a given population. I created an SAF index file for each population when I estimated [Fst](https://github.com/gausec/KingRailPopGen/blob/main/analyses/ANGSD/FST.md). **All steps below were repeated for each population.**
+> Note: This method requires a SAF file for a given population. Tajima’s D has to be folded, so the SAF index file for each population that I created when estimating [Fst](https://github.com/gausec/KingRailPopGen/blob/main/analyses/ANGSD/FST.md) can't be used here. **All steps below were repeated for each population.**
 &nbsp;
 &nbsp;
 ---
@@ -35,7 +35,7 @@
 &nbsp;
 #### 5. Extract the theta P (tP) column from the *.thetas.gz.pestPG output file and divide by the number of sites (nSites) used for the population.
 ```
-awk '{print $5 / $14}' NC.out.thetas.idx.pestPG > tP_divided_by_numSites.txt
+awk '{print $5 / $14}' NC.out.thetas.idx.pestPG > Pi.txt
 
 ```
 
