@@ -6,21 +6,39 @@
 &nbsp;
 ---
 &nbsp;
-### 1.Estimate the unfolded site frequency spectrum
+#### 1.Estimate the unfolded site frequency spectrum
 ```
 ../../../../angsd/misc/realSFS SFS.NC.saf.idx -P 24 > out.NC.sfs
 ```
 &nbsp;
 
-### 2. Calculate per-site thetas
+#### 2. Calculate per-site thetas
 ```
 ../../../../angsd/misc/realSFS saf2theta SFS.NC.saf.idx -P 20 -sfs out.NC.sfs -outname NC.out
 ```
 
 &nbsp;
-### 3. Estimate Tajimas D and other statistics
+#### 3. Calculate neutrality tests statistics
 
 ```
-./misc/thetaStat do_stat out.thetas.idx
- ```
+../../../../angsd/misc/thetaStat do_stat NC.out.thetas.idx
+```
+&nbsp;
+#### 4. Use the [thetaStat program](http://www.popgen.dk/angsd/index.php/ThetaStat) to estimate Tajima’s D.
+```
 
+```
+---
+&nbsp;
+### Next, I want to calculate nucleotide diversity ($\pi$) following the same method as [this study](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-018-1209-y).
+
+&nbsp;
+#### 5. Extract the theta P column from the pestPG file.
+```
+awk '{print $5}' NC.out.thetas.idx.pestPG > column_four.txt
+```
+&nbsp;
+#### 6. divided by the number of sites used for that population.
+```
+
+```
