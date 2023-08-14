@@ -33,12 +33,9 @@
 ### Next, I want to calculate nucleotide diversity ($\pi$) following the same method as [this study](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-018-1209-y).
 
 &nbsp;
-#### 5. Extract the theta P column from the pestPG file.
+#### 5. Extract the theta P (tP) column from the *.thetas.gz.pestPG output file and divide by the number of sites (nSites) used for the population.
 ```
-awk '{print $5}' NC.out.thetas.idx.pestPG > thetaP.txt
-```
-&nbsp;
-#### 6. divided by the number of sites used for that population.
-```
+awk '{print $5 / $14}' NC.out.thetas.idx.pestPG > tP_divided_by_numSites.txt
 
 ```
+
