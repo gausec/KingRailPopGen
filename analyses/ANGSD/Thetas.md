@@ -27,6 +27,9 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 ```
  ../../../../angsd/misc/thetaStat do_stat NC.out.thetas.idx -win 5000 -step 1000 -outnames NC
 ```
+- The *.thetas.idx.pestPG file contains statistics for different genomic regions.
+- Columns contain information about regions, reference name, center of the window, estimators of theta (Watterson, pairwise, etc.), and neutrality test statistics (Tajima's D, Fu&Li F's, etc.).
+- The last column indicates the effective number of sites with data in the window.
 ---
 &nbsp;
 ### Next, I want to calculate nucleotide diversity ($\pi$) following the same method as [this study](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-018-1209-y).
