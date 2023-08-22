@@ -23,7 +23,7 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 ../../../../angsd/misc/thetaStat do_stat NC.out.thetas.idx
 ```
 &nbsp;
-#### 4. Sliding window analysis
+#### 4. Sliding window analysis to calculate statistics in genomic windows.
 ```
  ../../../../angsd/misc/thetaStat do_stat NC.out.thetas.idx -win 5000 -step 1000 -outnames NC
 ```
