@@ -18,15 +18,14 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 ```
 
 &nbsp;
-#### 3. Calculate neutrality tests statistics
-
+#### 3. Calculate neutrality tests statistics using the [thetaStat program](http://www.popgen.dk/angsd/index.php/ThetaStat).
 ```
 ../../../../angsd/misc/thetaStat do_stat NC.out.thetas.idx
 ```
 &nbsp;
-#### 4. Use the [thetaStat program](http://www.popgen.dk/angsd/index.php/ThetaStat) to estimate Tajima’s D
+#### 4. Sliding window analysis
 ```
-
+ ../../../../angsd/misc/thetaStat do_stat FL.out.thetas.idx -win 5000 -step 1000 -outnames NC
 ```
 ---
 &nbsp;
