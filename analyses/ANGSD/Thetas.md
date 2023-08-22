@@ -25,7 +25,7 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 &nbsp;
 #### 4. Sliding window analysis
 ```
- ../../../../angsd/misc/thetaStat do_stat FL.out.thetas.idx -win 5000 -step 1000 -outnames NC
+ ../../../../angsd/misc/thetaStat do_stat NC.out.thetas.idx -win 5000 -step 1000 -outnames NC
 ```
 ---
 &nbsp;
