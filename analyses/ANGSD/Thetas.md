@@ -35,7 +35,17 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 ### Next, I want to calculate nucleotide diversity ($\pi$) following the same method as [this study](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-018-1209-y).
 
 &nbsp;
-#### 5. Extract the theta P (tP) column from the *.thetas.gz.pestPG output file and divide by the number of sites (nSites) used for the population
+#### 5. Create a new theta file where all the sites are treated as if they are on the same chromosome ( assign the same chromosome identifier to all sites). 
+5.1 Back up the orignial file
+```
+cp NC.out.thetas.idx NC.exome.thetas.idx
+```
+5.2 Replace the chromosome column with the same number
+```
+awk -v OFS='\t' '{$2 = 1; print}' NC.exome.thetas.idx > NC.exome.exome_wide.thetas.idx
+```
+
+Extract the theta P (tP) column from the *.thetas.gz.pestPG output file and divide by the number of sites (nSites) used for the population
 ```
 awk '{print $5 / $14}' NC.out.thetas.idx.pestPG > Pi.txt
 
