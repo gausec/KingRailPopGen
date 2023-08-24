@@ -38,17 +38,22 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 #### 5. Create a new theta file where all the sites are treated as if they are on the same chromosome ( assign the same chromosome identifier to all sites). 
 5.1 Back up the orignial file
 ```
-cp NC.out.thetas.idx NC.exome.thetas.idx
+cp NC.out.thetas.idx NC.backup.thetas.idx
 ```
 5.2 Replace the chromosome column with the same number
 ```
-awk -v OFS='\t' '{$2 = 1; print}' NC.exome.thetas.idx > NC.exome.exome_wide.thetas.idx
+awk -v OFS='\t' '{$2 = 1; print}' NC.backup.thetas.idx > NC.backup.all.thetas.idx
 ```
-#### 6. Calculate neutrality test statistics
+5.3 Recompress the file (Stuck here)
+```
+
+```
+#### 6. Calculate neutrality test statistics (This step isn't working yet)
 ```
 ../../../../angsd/misc/thetaStat do_stat NC.exome.exome_wide.thetas.idx
 ```
 
 #### 7. Extract the theta P (tP) column from the *.thetas.gz.pestPG output file and divide by the number of sites (nSites) used for the population
+
 
 
