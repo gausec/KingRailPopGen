@@ -35,7 +35,7 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 ### Next, I want to calculate nucleotide diversity ($\pi$) following the same method as [this study](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-018-1209-y).
 
 &nbsp;
-#### 5. Create a new theta file where all the sites are treated as if they are on the same chromosome ( assign the same chromosome identifier to all sites). 
+#### 5. Create a new theta file where all the sites are treated as if they are on the same chromosome (assign the same chromosome number to all sites). 
 5.1 Back up the orignial file
 ```
 cp NC.out.thetas.idx NC.backup.thetas.idx
