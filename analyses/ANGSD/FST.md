@@ -74,6 +74,30 @@ library("ggplot2") #plotting
 library("reshape2") #plotting
 library("adegenet") #FST statistics and data storage
 ```
-#### 6. Load pairwise *.fst output files
-
+#### 6. Read in pairwise *.fst output files
+```
+fst_AR_FL <- read.table("FstOut.AR_FL.fst", header = FALSE)
+fst_AR_NC <- read.table("FstOut.AR_NC.fst", header = FALSE)
+fst_AR_OH <- read.table("FstOut.AR_OH.fst", header = FALSE)
+fst_NC_FL <- read.table("FstOut.NC_FL.fst", header = FALSE)
+fst_NC_OH <- read.table("FstOut.NC_OH.fst", header = FALSE)
+fst_OH_FL <- read.table("FstOut.OH_FL.fst", header = FALSE)
+```
 #### 7. Combine the values from .fst files into a single matrix
+```
+fst_AR_FL <- fst_AR_FL[, -2]
+fst_AR_NC <- fst_AR_NC[, -2]
+fst_AR_OH <- fst_AR_OH[, -2]
+fst_NC_FL <- fst_NC_FL[, -2]
+fst_NC_OH <- fst_NC_OH[, -2]
+fst_OH_FL <- fst_OH_FL[, -2]
+
+```
+
+# Create a matrix with appropriate dimensions
+```{r}
+populations <- c("AR", "FL", "NC", "OH")
+combined_matrix <- matrix(0, nrow = length(populations), ncol = length(populations))
+rownames(combined_matrix) <- populations
+colnames(combined_matrix) <- populations
+```
