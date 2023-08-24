@@ -65,4 +65,15 @@
 
 ```
 
+---
+### Visualization in R
+#### 5. Load packages
+```
+library(hierfstat) #FST statistics
+library("ggplot2") #plotting
+library("reshape2") #plotting
+library("adegenet") #FST statistics and data storage
+```
+#### 6. Load pairwise *.fst output files
 
+#### 7. Combine the values from .fst files into a single matrix
