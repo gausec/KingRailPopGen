@@ -94,10 +94,27 @@ fst_OH_FL <- fst_OH_FL[, -2]
 
 ```
 
-# Create a matrix with appropriate dimensions
+#### 8. Create a matrix with appropriate dimensions
 ```{r}
 populations <- c("AR", "FL", "NC", "OH")
 combined_matrix <- matrix(0, nrow = length(populations), ncol = length(populations))
 rownames(combined_matrix) <- populations
 colnames(combined_matrix) <- populations
 ```
+
+#### 9. Melt the data
+```
+melted <- melt(data, id.vars = "Populations")
+```
+#### 10. Create FST heat map
+```
+ggplot(data = melted, aes(x = variable, y = Populations, fill = value)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient(low = "white", high = "red", name = "FST") +
+  ggtitle("Pairwise FST Values") +
+  labs(x = "Sampling Site", y = "Sampling Site") +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 11, hjust = 1), axis.text.y = element_text(size = 12)) +
+  coord_fixed()
+```
+
+
