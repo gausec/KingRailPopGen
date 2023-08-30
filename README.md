@@ -14,7 +14,7 @@ I am interested in comparing four geographically separate king rail populations 
   - **MapAndSort.sh**:  A bash shell script to map fastq files to a reference genome and sort the output bam file.
   - **bcftools.sh**: A bash shell script to create a VCF file containing variant calls from a BAM file.
   - **flagstat.sh**: A bash shell script to append the names of BAM files to a text file and executes samtools flagstat on each of them. It then adds the output to the same text file.
-  - **PCAngsdPlot.R**: An R script to create a PCA plot from the covariance matrix resulting from running PCANGSD.
+  - **PCAngsdPlot.R**: An R script to create a PCA plot from the covariance matrix output of PCANGSD.
   - **bcftools.sh**: A bash shell script to process sorted bam files using bcftools to generate VCF output files with appropriate prefixes.
 
 - **results**: A collection of subdirectories containing outputs of pre-processing steps and analyses
