@@ -50,5 +50,5 @@ awk '$1 != "-nan"' pi.txt > cleaned_pi.txt
 ```
 awk '{ sum += $1 } END { print sum / NR }' cleaned_pi.txt
 ```
-
+### 8. Extract Watterson's theta (tP) from the *.thetas.gz.pestPG output file
 
