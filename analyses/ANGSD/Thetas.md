@@ -32,11 +32,11 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 - The last column indicates the effective number of sites with data in the window.
 ---
 &nbsp;
-### Next, I want to calculate nucleotide diversity ($\pi$) following the same method as [this study](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-018-1209-y), and then calculate Watterson's theta.
+### Next, I want to calculate nucleotide diversity ($\pi$) following the same method as [this study](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-018-1209-y), and then calculate Watterson's theta. *There are now scripts for these in the bin subdirectory.*
 
 &nbsp;
 
-#### 5. Extract the theta P (tP) column from the *.thetas.gz.pestPG output file and divide by the number of sites (nSites) used for the population.
+#### 5. Extract the theta P (tP) column from the *.thetas.gz.pestPG output file and divide by the number of sites (nSites) used for the population. 
 ```
 awk '{print $5 / $14}' NC.out.thetas.idx.pestPG >> pi.txt
 ```
@@ -53,7 +53,7 @@ awk '{ sum += $1 } END { print sum / NR }' cleaned_pi.txt
 #### 8. Calculate Watterson's theta from the *.thetas.gz.pestPG output file in the same way.
 8.1 Extract Watterson's theta (tW).
 ```
-awk '{print $5 / $14}' NC.out.thetas.idx.pestPG >> tW.txt
+awk '{print $4 / $14}' NC.out.thetas.idx.pestPG >> tW.txt
 ```
 8.2 Remove any empty rows.
 ```
