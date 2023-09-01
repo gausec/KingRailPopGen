@@ -50,7 +50,7 @@ awk '$1 != "-nan"' pi.txt > cleaned_pi.txt
 ```
 awk '{ sum += $1 } END { print sum / NR }' cleaned_pi.txt
 ```
-### 8. Calculate Watterson's theta from the *.thetas.gz.pestPG output file in the same way.
+#### 8. Calculate Watterson's theta from the *.thetas.gz.pestPG output file in the same way.
 8.1 Extract Watterson's theta (tW).
 ```
 awk '{print $5 / $14}' NC.out.thetas.idx.pestPG >> tW.txt
