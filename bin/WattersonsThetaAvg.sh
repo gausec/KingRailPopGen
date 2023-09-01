@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# check for the input file argument
+# check for input file
 if [ $# -eq 0 ]; then
   echo "Usage: $0 <input_file.thetas.idx.pestPG>"
   exit 1
