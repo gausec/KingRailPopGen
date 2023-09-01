@@ -6,13 +6,13 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 --- 
 &nbsp;
 
-#### 1. Estimate the folded site frequency spectrum
+#### 1. Estimate the folded site frequency spectrum.
 ```
 ../../../../angsd/misc/realSFS SFS.NC.saf.idx -P 24 -fold 1 -anc ../../CLRAindex/Rallus_crepitans_1.0.fasta > out.NC.sfs
 ```
 &nbsp;
 
-#### 2. Calculate per-site thetas
+#### 2. Calculate per-site thetas.
 ```
 ../../../../angsd/misc/realSFS saf2theta SFS.NC.saf.idx -P 20 -sfs out.NC.sfs -outname NC.out
 ```
@@ -36,19 +36,30 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 
 &nbsp;
 
-#### 5. Extract the theta P (tP) column from the *.thetas.gz.pestPG output file and divide by the number of sites (nSites) used for the population
+#### 5. Extract the theta P (tP) column from the *.thetas.gz.pestPG output file and divide by the number of sites (nSites) used for the population.
 ```
 awk '{print $5 / $14}' NC.out.thetas.idx.pestPG >> pi.txt
 ```
 
-#### 6. Remove any empty rows
+#### 6. Remove any empty rows.
 ```
 awk '$1 != "-nan"' pi.txt > cleaned_pi.txt
 ```
 
-#### 7. Calculate pi
+#### 7. Calculate pi.
 ```
 awk '{ sum += $1 } END { print sum / NR }' cleaned_pi.txt
 ```
-### 8. Extract Watterson's theta (tP) from the *.thetas.gz.pestPG output file
-
+### 8. Calculate Watterson's theta from the *.thetas.gz.pestPG output file in the same way.
+8.1 Extract Watterson's theta (tW).
+```
+awk '{print $5 / $14}' NC.out.thetas.idx.pestPG >> tW.txt
+```
+8.2 Remove any empty rows.
+```
+awk '$1 != "-nan"' tW.txt > cleaned_tW.txt
+```
+8.3 Calculate Waterson's theta by taking the average.
+```
+awk '{ sum += $1 } END { print sum / NR }' cleaned_tW.txt
+```
