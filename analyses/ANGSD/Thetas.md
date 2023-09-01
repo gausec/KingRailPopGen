@@ -32,7 +32,7 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 - The last column indicates the effective number of sites with data in the window.
 ---
 &nbsp;
-### Next, I want to calculate nucleotide diversity ($\pi$) following the same method as [this study](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-018-1209-y).
+### Next, I want to calculate nucleotide diversity ($\pi$) following the same method as [this study](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-018-1209-y), and then calculate Watterson's theta.
 
 &nbsp;
 
