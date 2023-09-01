@@ -9,5 +9,6 @@ for bam_file in "$bam_directory"/*.sorted.bam; do
     file_prefix=$(basename "$bam_file" .sorted.bam)
 
     # Perform the bcftools commands using the current bam_file and file_prefix
-    bcftools mpileup -O b -o "${file_prefix}_output_raw.vcf" -f CLRAindex/Rallus_crepitans_1.0.fasta -Ou --threads 20 "$bam_file" | bcftools call -m -Ov -f GQ -o "${file_prefix}_output_filtered.vcf"
+    bcftools mpileup -Ou b -o "${file_prefix}_output_raw.vcf" -f CLRAindex/Rallus_crepitans_1.0.fasta -Ou --threads 20 "$bam_file" | bcftools call -mv -Ob -o "${file_prefix}_output_filtered.bcf"
+
 done
