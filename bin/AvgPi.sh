@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+# Note for future me: = and == are for string comparisons while -eq is for numeric comparisons
+# The "$#" stores the total number of arguments
+
+
 # Check for the input file
 if [ $# -eq 0 ]; then
   echo "Usage: $0 <input_file.thetas.idx.pestPG>"
