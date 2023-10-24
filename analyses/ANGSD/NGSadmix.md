@@ -5,8 +5,10 @@
 ANGSD=~/angsd/angsd
 ```
 ```
-$ANGSD -bam all.files -GL 2 -doMajorMinor 1 -doMaf 1 -SNP_pval 2e-6 -minMapQ 30 -minQ 20 -minInd 25 -minMaf 0.05 -doGlf 2 -out input.gz -P 5
+$ANGSD -bam BamFileList -GL 1 -doMajorMinor 1 -doMaf 1 -SNP_pval 1e-6 -minMapQ 30 -minQ 20 -minInd 25 -minMaf 0.05 -doGlf 3 -out input.gz -P 10
 ```
+- -GL 1 = SAMtools model
+- -doGlf 3 = beagle binary
 2. Run an analysis of the GLs with NGSadmix, assuming the number of ancestral populations is K:
 ```
 $NGSADMIX -likes input.gz -K 1 -minMaf 0.05 -seed 1 -o $OUT_DIR/NGSadmix
