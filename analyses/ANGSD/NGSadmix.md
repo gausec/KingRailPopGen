@@ -5,7 +5,7 @@
 ANGSD=~/angsd/angsd
 ```
 ```
-$ANGSD -bam BamFileList -GL 1 -doMajorMinor 1 -doMaf 1 -SNP_pval 1e-6 -minMapQ 30 -minQ 20 -minInd 25 -minMaf 0.05 -doGlf 3 -out input.gz -P 10
+$ANGSD -bam BamFileList -GL 1 -doMajorMinor 1 -doMaf 1 -ref CLRAindex/Rallus_crepitans_1.0.fasta -SNP_pval 1e-6 -minMapQ 30 -minQ 20 -minInd 25 -minMaf 0.05 -doGlf 3 -out input.gz -nThreads 8
 ```
 - -GL 1 = SAMtools model
 - -doGlf 3 = beagle binary
