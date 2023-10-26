@@ -11,6 +11,7 @@ $ANGSD -bam BamFileList -GL 1 -doMajorMinor 1 -doMaf 1 -ref CLRAindex/Rallus_cre
 - -doGlf 3 = beagle binary
 2. Run an analysis of the GLs with NGSadmix, assuming the number of ancestral populations is K:
 ```
-$NGSADMIX -likes input.gz -K 1 -minMaf 0.05 -seed 1 -o $OUT_DIR/NGSadmix
+$NGSADMIX -likes input.gz -K 4 -minMaf 0.05 -seed 1 -o $OUT_DIR/NGSadmix
 ```
+- should `-k` be 1 or 4 groups?
 ## Plot the results in R
