@@ -33,7 +33,7 @@ cut -f1 -d" " PopInfo > poplabel
 &nbsp;
 #### 3. View the genotype likelihood beagle file
 
-3.1 View he first 10 columns and 10 lines of the input file:
+3.1 View the first 10 columns and 10 lines of the input file:
 ```
 gunzip -c input.gz.beagle.gz | head -n 10 | cut -f 1-10 | column -t
 ```
