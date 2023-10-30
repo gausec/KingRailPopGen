@@ -1,6 +1,7 @@
 ## NGSadmix
 &nbsp;
 > I am using [NGSadmix](http://www.popgen.dk/software/index.php/NgsAdmixTutorial) in ANGSD to estimate individual admixture proportions from NGS data for  four populations of king rails, and then examine whether these populations separate based on their admixture patterns. I am looking for substructure among the populations.
+> This is a helpful tutorial: [Population Structure using NGSadmix](https://baylab.github.io/MarineGenomics/week-9-population-structure-using-ngsadmix.html)
 
 &nbsp;
 &nbsp;
