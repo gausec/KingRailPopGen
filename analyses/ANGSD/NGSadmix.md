@@ -84,7 +84,7 @@ pop<-read.csv("PopLabel.csv", header = FALSE)
 #### 7. ID and population info for each individual
 ```
 pop<-as.matrix(pop)
-ord = order(pop)
+ord = order(pop) #order by population
 ```
 &nbsp;
 &nbsp;
@@ -96,3 +96,46 @@ barplot(t(q)[, ord], col = colors, names = pop[ord], las = 2, ylab = "Demo1 Admi
 ```
 &nbsp;
 &nbsp;
+
+#### 9. Get an accurate estimate of the “best” K for our data
+9.1 Libraries
+```
+library(stringr)
+```
+
+9.2 Data
+```
+data<-list.files("structure_outs/", pattern = ".log", full.names = T)
+
+#sanity check
+data
+```
+9.3 use `lapply` to read in all log files at once
+```
+bigData<-lapply(1:21, FUN = function(i) readLines(data[i]))
+```
+9.4 pull out the line that starts with "b" from each file and return it as a list
+```
+foundset<-sapply(1:21, FUN= function(x) bigData[[x]][which(str_sub(bigData[[x]], 1, 1) == 'b')])
+
+# sanity check
+foundset
+```
+9.5 pull out the first number in the string using the function `sub`
+```
+as.numeric( sub("\\D*(\\d+).*", "\\1", foundset) )
+```
+9.6 store it in a dataframe (index 1:10, corresponding to K values)
+```
+logs<-data.frame(K = rep(1:7, each=3))
+```
+9.7 add to likelihood values
+```
+logs$like<-as.vector(as.numeric( sub("\\D*(\\d+).*", "\\1", foundset) ))
+```
+9.8 calculate delta K & probability (use these values to select K, which will be the one that has the highest value)
+```
+tapply(logs$like, logs$K, FUN= function(x) mean(abs(x))/sd(abs(x)))
+```
+
+
