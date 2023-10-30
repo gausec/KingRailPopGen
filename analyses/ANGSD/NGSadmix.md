@@ -67,8 +67,8 @@ head -n 5 NGSadmix_k.qopt
 #### 6. Data & libraries 
 6.1 Libraries
 ```
-library(ggplot2)
-library(viridis)
+library(ggplot2) # Just in case
+library(viridis) # Color palette 
 ```
 6.2 Data
 ```
