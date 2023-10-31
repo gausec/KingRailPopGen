@@ -79,7 +79,7 @@ library(viridis) # Color palette
 ```
 6.2 Data
 ```
-q<-read.table("NGSadmix_k.qopt")
+q2<-read.table("NGSadmix_2.qopt")
 pop<-read.csv("PopLabel.csv", header = FALSE)
 ```
 &nbsp;
@@ -92,10 +92,16 @@ ord = order(pop) #order by population
 &nbsp;
 &nbsp;
 #### 8. Plot
+8.1 set population parameters and colors
 ```
 num_pops <- 2  # Adjust based on K
 colors <- viridis(num_pops)
-barplot(t(q)[, ord], col = colors, names = pop[ord], las = 2, ylab = "K=2, Admixture Proportions", cex.names = 0.75)
+```
+8.2 create structure plot and save as a .png file
+```
+png(file="K2.png", width = 800, height = 600)
+barplot(t(q2)[, ord], col = my_colors, names = pop[ord], las = 2, ylab = "K=2, Admixture Proportions", cex.names = 0.75)
+dev.off()
 ```
 &nbsp;
 
