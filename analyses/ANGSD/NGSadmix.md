@@ -93,13 +93,15 @@ ord = order(pop) #order by population
 &nbsp;
 #### 8. Plot
 ```
-num_pops <- 1  # Adjust based on K
+num_pops <- 2  # Adjust based on K
 colors <- viridis(num_pops)
-barplot(t(q)[, ord], col = colors, names = pop[ord], las = 2, ylab = "Demo1 Admixture Proportions", cex.names = 0.75)
+barplot(t(q)[, ord], col = colors, names = pop[ord], las = 2, ylab = "K=2, Admixture Proportions", cex.names = 0.75)
 ```
 &nbsp;
 &nbsp;
 
+- **Repeat step 8 to create a structure plot for each value of k**
+  
 #### 9. Get an accurate estimate of the “best” K for our data
 9.1 Libraries
 ```
