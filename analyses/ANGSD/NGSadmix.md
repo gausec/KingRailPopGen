@@ -29,7 +29,7 @@ $ANGSD/angsd -bam BamFileList.txt -ref CLRAindex/Rallus_crepitans_1.0.fasta -anc
 ```
 cut -f 1 -d " " PopInfo | sort | uniq -c
 ```
-make a population label file and place it in the output directory
+2.2 make a population label file
 ```
 cut -f1 -d" " PopInfo > poplabel
 ```
