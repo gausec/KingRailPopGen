@@ -56,7 +56,7 @@ for k in {2..10}; do $ANGSD/NGSadmix -likes input.gz.beagle.gz -K $k -minMaf 0.0
 
 
 ```
-- Trying `-k` = 2-10
+- Trying different values of `-k`, the number of assumed ancestral populations: 2-10
 
 
 &nbsp;
