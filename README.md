@@ -1,4 +1,4 @@
-## King Rail Population Comparison
+$${\color{green}\Huge {King \space Rail \space Population \space Comparison }}$$   
 
 #### This repository contains files and information pertaining to whole genome data of four species (king rail, clapper rail, Virginia rail, and eastern bluebird). My research centers the king rail, and so the primary focus of this repository is the processing and analyzing of king rail whole genome data.
 - - - -
