@@ -100,7 +100,7 @@ barplot(t(q)[, ord], col = colors, names = pop[ord], las = 2, ylab = "K=2, Admix
 &nbsp;
 
 
-- **Repeat steps 7-8 to create a structure plot for each value of k**
+- **Repeat steps 6-8 to create a structure plot for each value of k**
 
 &nbsp;
 &nbsp;
