@@ -98,10 +98,13 @@ colors <- viridis(num_pops)
 barplot(t(q)[, ord], col = colors, names = pop[ord], las = 2, ylab = "K=2, Admixture Proportions", cex.names = 0.75)
 ```
 &nbsp;
+
+
+- **Repeat steps 7-8 to create a structure plot for each value of k**
+
+&nbsp;
 &nbsp;
 
-- **Repeat step 8 to create a structure plot for each value of k**
-  
 #### 9. Get an accurate estimate of the “best” K for our data
 9.1 Libraries
 ```
