@@ -1,4 +1,4 @@
-## Variant calling
+## SNP calling using bcftools
 ---
 ### Steps
 1.  Create a BCF file containing variant calls from a BAM file using [bcftools](https://samtools.github.io/bcftools/howtos/variant-calling.html). 
