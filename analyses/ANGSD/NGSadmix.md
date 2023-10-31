@@ -51,7 +51,8 @@ gunzip -c input.gz.beagle.gz | wc -l
 
 #### 4. Run an analysis of the GLs with NGSadmix, assuming the number of ancestral populations is K:
 ```
-for ((k=1; k<=10; k++)); do $ANGSD/NGSadmix -likes input.gz.beagle.gz -K $k -minMaf 0.05 -seed 1 -P 25 -o NGSadmix/NGSadmix_$k; done
+for k in {1..10}; do $ANGSD/NGSadmix -likes input.gz.beagle.gz -K $k -minMaf 0.05 -seed 1 -P 25 -o NGSadmix/NGSadmix_$k; done
+
 
 
 ```
