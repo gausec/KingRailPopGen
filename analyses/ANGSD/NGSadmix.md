@@ -111,7 +111,7 @@ $${\color{lightgreen}Repeat \space steps \space 6-8 \space to \space create \spa
 &nbsp;
 &nbsp;
 
-#### 9. Get an accurate estimate of the “best” K for our data
+#### 9. Get an accurate estimate of the “best” K 
 9.1 Libraries
 ```
 library(stringr)
