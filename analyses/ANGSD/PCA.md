@@ -1,6 +1,6 @@
 &nbsp;
 ## Principal component analysis
-#### I am completing a principal component analysis using [PCAngsd](http://www.popgen.dk/software/index.php/PCAngsd) to better understand population structure. 
+#### I am completing a principal component analysis using [PCAngsd](http://www.popgen.dk/software/index.php/PCAngsd) to better understand population structure. I am using one [CLRA](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR23269681&display=download) in my analysis.
 ---
 &nbsp;
 
