@@ -12,7 +12,7 @@ cut -f 1 -d $'\t' PopInfo.txt | sort | uniq -c
 ```
 ##### &nbsp; 1.2 Obtain genotype likelihoods in Beagle format
 ```
-../../angsd/angsd -GL 2 -out ../../PCA/Agenolike -nThreads 10 -ref CLRAindex/Rallus_crepitans_1.0.fasta -doGlf 2 -doMajorMinor 1 -SNP_pval 1e-6 -doMaf 1 -bam BamFileList
+../../angsd/angsd -bam BamFileList.txt -ref CLRAindex/Rallus_crepitans_1.0.fasta -anc CLRAindex/Rallus_crepitans_1.0.fasta -GL 1 -doMajorMinor 1 -doMaf 1 -doSaf 1 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20  -doGlf 2 -out input.gz -nThreads 8
 ```
 
 #### 2. Run PCAngsd
@@ -25,7 +25,7 @@ pip3 install -e .
 ```
 ##### &nbsp; 2.2 Perform principal component analysis on the genoltype liklihood beagle files
 ```
-pcangsd -b genolike.beagle.gz --sites_save -t 20 -o output.pcangsd
+python pcangsd.py -b genolike.beagle.gz --sites_save -t 20 -o output.pcangsd
 ```
 ---
 &nbsp;
