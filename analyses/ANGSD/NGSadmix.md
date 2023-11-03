@@ -57,9 +57,9 @@ for k in {2..10}; do $ANGSD/NGSadmix -likes input.gz.beagle.gz -K $k -mTol 0.9 -
 
 ```
 - Trying different values of `-k`, the number of assumed ancestral populations: 2-10
-- `-mTol`: include high quality genotypes only
-- `-seed 1`: Seed for initial guess in EM algorithm
-- `-P`: Number of threads
+- `-mTol`= include high quality genotypes only
+- `-seed 1`= seed for initial guess in EM algorithm
+- `-P`= number of threads
 
 &nbsp;
 &nbsp;
