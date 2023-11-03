@@ -18,8 +18,8 @@ ANGSD=../../angsd
 $ANGSD/angsd -bam BamFileList.txt -ref CLRAindex/Rallus_crepitans_1.0.fasta -anc CLRAindex/Rallus_crepitans_1.0.fasta -GL 1 -doMajorMinor 1 -doMaf 1 -doSaf 1 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20  -doGlf 2 -out input.gz -nThreads 8
 ```
 - `-GL 1` = SAMtools model
-- `-doGlf 3` = beagle binary
 - `-doGlf 2` = beagle format
+  
 
 &nbsp;
 &nbsp;
@@ -51,13 +51,15 @@ gunzip -c input.gz.beagle.gz | wc -l
 
 #### 4. Run an analysis of the GLs with NGSadmix, assuming the number of ancestral populations is K:
 ```
-for k in {2..10}; do $ANGSD/NGSadmix -likes input.gz.beagle.gz -K $k -seed 1 -P 25 -o NGSadmix/NGSadmix_$k; done
+for k in {2..10}; do $ANGSD/NGSadmix -likes input.gz.beagle.gz -K $k -mTol 0.9 -seed 1 -P 25 -o NGSadmix/NGSadmix_$k; done
 
 
 
 ```
 - Trying different values of `-k`, the number of assumed ancestral populations: 2-10
-
+- `-mTol`: include high quality genotypes only
+- `-seed 1`: Seed for initial guess in EM algorithm
+- `-P`: Number of threads
 
 &nbsp;
 &nbsp;
