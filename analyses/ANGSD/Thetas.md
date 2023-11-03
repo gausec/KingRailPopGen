@@ -30,8 +30,14 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 - The *.thetas.idx.pestPG file contains statistics for different genomic regions.
 - Columns contain information about regions, reference name, center of the window, estimators of theta (Watterson, pairwise, etc.), and neutrality test statistics (Tajima's D, Fu&Li F's, etc.).
 - The last column indicates the effective number of sites with data in the window.
----
 &nbsp;
+&nbsp;
+
+---
+
+$${\color{orange}nucleotide \space diversity \space (π)}$$
+
+---
 ### Next, I want to calculate nucleotide diversity (π) following the same method as [this study](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-018-1209-y), and then calculate Watterson's theta. *There are now scripts for these in the bin subdirectory.*
 
 &nbsp;
