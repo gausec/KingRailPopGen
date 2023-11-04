@@ -25,7 +25,7 @@ pip3 install -e .
 ```
 ##### &nbsp; 2.2 Perform principal component analysis on the genoltype liklihood beagle files
 ```
-python pcangsd.py -b genolike.beagle.gz --sites_save -t 20 -o output.pcangsd
+ pcangsd -b genolike.beagle.gz --sites_save -t 20 -o output.pcangsd
 ```
 ---
 &nbsp;
