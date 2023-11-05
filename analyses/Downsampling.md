@@ -27,7 +27,7 @@ wget https://github.com/broadinstitute/picard/releases/download/3.1.0/picard.jar
 ```
 &nbsp;
 
-#### 2. Downsample all bam files keeping 10% of all reads
+#### 2. Downsample all bam files keeping 50% of all reads
 ```
- java -jar jdk-21.0.1/bin/picard.jar DownsampleSam -I WholeGenomes/SortedBAM/11101.sorted.bam -O 11101.downsampled.bam -P 0.1
+ java -jar jdk-21.0.1/bin/picard.jar DownsampleSam -I WholeGenomes/SortedBAM/11101.sorted.bam -O 11101.downsampled.bam -P 0.5
 ```
