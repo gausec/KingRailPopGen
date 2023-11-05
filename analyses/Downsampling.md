@@ -25,10 +25,9 @@ bam=~/WholeGenomes/SortedBAM/
 ```
 wget https://github.com/broadinstitute/picard/releases/download/3.1.0/picard.jar
 ```
+&nbsp;
 
 #### 2. Downsample all bam files keeping 10% of all reads
 ```
-$java java -v jdk-21.0.1 -jar picard.jar DownsampleSam \
-       I=input.bam \
-       O=downsampled.bam \
-       P=0.1
+$java java -v jdk-21.0.1 --exec -jar picard.jar DownsampleSam I=$bam/11101.sorted.bam O=11101.downsampled.bam P=0.1
+```
