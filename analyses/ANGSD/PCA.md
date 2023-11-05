@@ -87,3 +87,35 @@ plot(pca)
 ```{r}
 ggsave("pca_plot.png", plot = pca, width = 8, height = 6, dpi = 300)
 ```
+
+---
+
+### DAPC
+> I will be using DAPC to further investigate structure between populations using R package [adegenet](https://cran.r-project.org/web/packages/adegenet/index.html).
+
+&nbsp;
+ 
+Helpful tutorial: https://grunwaldlab.github.io/Population_Genetics_in_R/DAPC.html
+&nbsp;
+
+#### 1. Cross validation to ID PCs
+```
+pc_range <- 40:70
+xval_results <- list()
+
+for (num_pcs in pc_range) {
+  # Perform cross-validation with num_pcs
+  xval_result <- xvalDapc(cov_matrix, grp = pca.vectors$Location, n.pca.max = num_pcs, n.rep = 30)
+  xval_results[[as.character(num_pcs)]] <- xval_result
+}
+```
+&nbsp;
+
+#### 2. Extract
+```
+xval_result$`Number of PCs Achieving Lowest MSE`
+```
+
+
+
+
