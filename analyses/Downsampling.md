@@ -1,4 +1,4 @@
-### I will be using [Picard tools](https://broadinstitute.github.io/picard/) form GATK to downsample bam files for downstream analyses.
+### I will be using the [DownsampleSam tool](https://broadinstitute.github.io/picard/) within [Picard tools](https://broadinstitute.github.io/picard/) from [GATK](https://gatk.broadinstitute.org/hc/en-us) to downsample bam files for downstream analyses.
 &nbsp; 
 &nbsp; 
 
