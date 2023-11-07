@@ -29,6 +29,7 @@ for file in *R1.fastq.gz; do base=$(basename "$file" | cut -c1-5); echo "$base";
 ```
 for file in *.sam; do base=$(basename "$file" .sam); samtools view -bS -@ 8 $file > BAM/${base}.bam; done
 ```
+*Note: to save time, pipe the mapped output directly to samtools to convert to a bam file to save time.*
 
 ---
 #### 4. Arrange the aligned reads in the BAM files based on their coordinates in the reference genome (This is called sorting)
