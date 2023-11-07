@@ -33,8 +33,13 @@ wget https://github.com/broadinstitute/picard/releases/download/3.1.0/picard.jar
  java -jar jdk-21.0.1/bin/picard.jar DownsampleSam -I WholeGenomes/SortedBAM/11101.sorted.bam -O 11101.downsampled.bam -P 0.5
 ```
 
+&nbsp;
+
+&nbsp;
 
 ---
+&nbsp;
+
 
 ### I am also interested in filtering out the sex chromosomes (Z & W)
 &nbsp;
