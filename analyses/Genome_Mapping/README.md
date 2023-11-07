@@ -36,7 +36,7 @@ for file in *.sam; do base=$(basename "$file" .sam); samtools view -bS -@ 8 $fil
 ```
 for file in *.bam; do echo "Sorting ${file}"; samtools sort -@ 8 -o SortedBAM/${file}.sorted.bam; done
 ```
-*Note: I am using `echo` so bash will tell me which file samtools is currently sorting. `-@` specifies that I want to use 40 threads to speed up the process. `${file%.*}` is a parameter expansion that removes the shortest matching pattern from the variable `$file`. In this case, the pattern is `.*`. This matches any sequence of characters that ends with a dot and removes it from the end of `$file`.* 
+*Note: I am using `echo` so bash will tell me which file samtools is currently sorting. `-@` specifies that I want to use threads. `${file%.*}` is a parameter expansion that removes the shortest matching pattern from the variable `$file`. In this case, the pattern is `.*`. This matches any sequence of characters that ends with a dot and removes it from the end of `$file`.* 
  
 #### 5. Determine average depth
 ```
