@@ -54,8 +54,12 @@ makeblastdb -in  W-chr.fasta  -dbtype nucl -out W_chromosome_db
 ```
 makeblastdb -in Z-chr.fasta -dbtype nucl -out Z_chromosome_db
 ```
+1.3 chromosome 1
+```
+makeblastdb -in  chr1.fasta  -dbtype nucl -out chr1_db
+```
 &nbsp;
-#### 2. Perform Sequence Searches against reference genome
+#### 2. Perform Sequence Searches against reference 
 1.1 W chromsome
 ```
 blastn -query SortedBAM/CLRAindex/Rallus_crepitans_1.0.fasta -db W_chromosome_db -out W_chromosome_results.tx
@@ -64,7 +68,8 @@ blastn -query SortedBAM/CLRAindex/Rallus_crepitans_1.0.fasta -db W_chromosome_db
 ```
 blastn -query SortedBAM/CLRAindex/Rallus_crepitans_1.0.fasta -db Z_chromosome_db -out Z_chromosome_results.txt
 ```
+1.2 chromosome 1
+```
+blastn -query SortedBAM/CLRAindex/Rallus_crepitans_1.0.fasta -db chr1_db -out chromosome1_results.txt
+```
 
-&nbsp;
-
-#### 3. 
