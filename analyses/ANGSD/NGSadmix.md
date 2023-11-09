@@ -74,7 +74,7 @@ head -n 5 NGSadmix_k.qopt
 
 ---
 
-### Let's do the same analysis this time with just the first scaffold
+### Let's do the same analysis this time with just the first 10 scaffolds
 &nbsp;
 
 #### 1. make a sites file to limit analysis
