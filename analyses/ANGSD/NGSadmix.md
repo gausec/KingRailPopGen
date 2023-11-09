@@ -15,7 +15,7 @@ ANGSD=../../angsd
 ```
 1.2 Beagle file
 ```
-$ANGSD/angsd -bam BamFileList.txt -ref CLRAindex/Rallus_crepitans_1.0.fasta -anc CLRAindex/Rallus_crepitans_1.0.fasta -GL 1 -doMajorMinor 1 -doMaf 1 -doSaf 1 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20  -doGlf 2 -out input.gz -nThreads 8
+$ANGSD/angsd -bam BamFileList.txt -ref CLRAindex/Rallus_crepitans_1.0.fasta -anc CLRAindex/Rallus_crepitans_1.0.fasta -GL 1 -doMajorMinor 1 -doMaf 1 -doSaf 1 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20  -doGlf 2 -out input -nThreads 8
 ```
 - `-GL 1` = SAMtools model
 - `-doGlf 2` = beagle format
@@ -39,11 +39,11 @@ cut -f1 -d" " PopInfo > poplabel
 
 3.1 View the first 10 columns and 10 lines of the input file:
 ```
-gunzip -c input.gz.beagle.gz | head -n 10 | cut -f 1-10 | column -t
+gunzip -c input.beagle.gz | head -n 10 | cut -f 1-10 | column -t
 ```
 3.2 count the number of lines of the input file. The number of lines, indicates the number of loci for which there are GLs plus one (as the command includes the count of the header line):
 ```
-gunzip -c input.gz.beagle.gz | wc -l
+gunzip -c input.beagle.gz | wc -l
 ```
 &nbsp;
 &nbsp;
@@ -51,7 +51,7 @@ gunzip -c input.gz.beagle.gz | wc -l
 
 #### 4. Run an analysis of the GLs with NGSadmix, assuming the number of ancestral populations is K:
 ```
-for k in {2..10}; do $ANGSD/NGSadmix -likes input.gz.beagle.gz -K $k -misTol 0.9 -seed 1 -P 25 -o NGSadmix/NGSadmix_$k; done
+for k in {2..10}; do $ANGSD/NGSadmix -likes input.beagle.gz -K $k -misTol 0.9 -seed 1 -P 25 -o NGSadmix/NGSadmix_$k; done
 
 
 
