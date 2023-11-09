@@ -71,6 +71,41 @@ head -n 5 NGSadmix_k.qopt
 ```
 &nbsp;
 &nbsp;
+
+---
+
+### Let's do the same analysis this time with just the first scaffold
+&nbsp;
+
+#### 1. make a sites file to limit analysis
+```
+samtools view -H 11101.bam | grep "@SQ" | cut -f 2,3 | sed 's/SN://;s/LN://' > scaffolds.txt
+```
+&nbsp;
+#### 2. make sites file for ANGSD
+```
+awk '{print $1, "1", $2}' scaffolds.txt > sites.txt
+```
+&nbsp;
+#### 3. Index
+```
+angsd sites index sites.txt
+
+```
+&nbsp;
+#### 4. use the generated sites file in analysis
+4.1 Make beagle file with `-sites` flag
+```
+angsd/angsd -bam BamFileList.txt -ref CLRAindex/Rallus_crepitans_1.0.fasta -anc CLRAindex/Rallus_crepitans_1.0.fasta -GL 1 -doMajorMinor 1 -doMaf 1 -doSaf 1 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20  -doGlf 2 -out sites -nThreads 8
+```
+&nbsp;
+4.2 re-do analysis
+```
+for k in {2..10}; do angsd/NGSadmix -likes sites.beagle.gz -K $k -misTol 0.9 -seed 1 -P 25 -o NGSadmix/NGSadmix_$k; done
+```
+&nbsp;
+&nbsp;
+
 ## Plot the results in R
 &nbsp;
 #### 6. Data & libraries 
