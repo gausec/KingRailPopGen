@@ -1,5 +1,7 @@
 ## SNP calling using bcftools
----
+
+$nbsp;
+
 ### Steps
 1.  Create a BCF file containing variant calls from a BAM file using [bcftools](https://samtools.github.io/bcftools/howtos/variant-calling.html). 
 ```
@@ -8,7 +10,11 @@ bcftools mpileup -Ou -f CLRAindex/Rallus_crepitans_1.0.fasta --threads 20 11101.
 
 ---
 
+
 ### SNP calling using ANGSD
+
+SNPs are called based on their allele frequencies. If a site has a minor allele frequency significantly different from 0, a site is called as polymorphic.
+
 ```
 angsd/angsd -bam BamFileList -ref CLRAindex/Rallus_crepitans_1.0.fasta -anc CLRAindex/Rallus_crepitans_1.0.fasta -GL 2 -doMajorMinor 1 -doMaf 2 -doSaf 1 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20 -out input -nThreads 8
 ```
