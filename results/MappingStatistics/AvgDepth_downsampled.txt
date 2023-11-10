@@ -1,0 +1,171 @@
+11101.downsampled.bam
+Average depth: 10.0405
+
+11103.downsampled.bam
+Average depth: 10.0009
+
+11104.sorted.bam
+Average depth: 6.9082
+
+11105.downsampled.bam
+Average depth: 10.0997
+
+11106.sorted.bam
+Average depth: 31.0784
+
+11108.downsampled.bam
+Average depth: 9.9654
+
+11109.downsampled.bam
+Average depth: 10.0365
+
+11110.downsampled.bam
+Average depth: 10.0196
+
+11111.sorted.bam
+Average depth: 8.40498
+
+11113.downsampled.bam
+Average depth: 10.0303
+
+11114.sorted.bam
+Average depth: 8.9542
+
+11115.downsampled.bam
+Average depth: 10.0651
+
+11116.sorted.bam
+Average depth: 5.03238
+
+11117.downsampled.bam
+Average depth: 10.0114
+
+11119.downsampled.bam
+Average depth: 10.0723
+
+11120.downsampled.bam
+Average depth: 9.96144
+
+43215.downsampled.bam
+Average depth: 10.0372
+
+43613.downsampled.bam
+Average depth: 10.0515
+
+43617.downsampled.bam
+Average depth: 9.95959
+
+43621.downsampled.bam
+Average depth: 10.0621
+
+43623.downsampled.bam
+Average depth: 10.0282
+
+43633.sorted.bam
+Average depth: 5.13733
+
+43639.downsampled.bam
+Average depth: 10.0081
+
+43646.sorted.bam
+Average depth: 7.09655
+
+43647.sorted.bam
+Average depth: 8.40504
+
+43648.sorted.bam
+Average depth: 8.53083
+
+43649.downsampled.bam
+Average depth: 10.1198
+
+43654.sorted.bam
+Average depth: 9.38421
+
+43657.downsampled.bam
+Average depth: 10.0539
+
+43670.sorted.bam
+Average depth: 8.46548
+
+43671.sorted.bam
+Average depth: 6.46254
+
+43689.sorted.bam
+Average depth: 16.7945
+
+45049.downsampled.bam
+Average depth: 10.0289
+
+45309.downsampled.bam
+Average depth: 10.0111
+
+45655.sorted.bam
+Average depth: 12.6516
+
+48819.downsampled.bam
+Average depth: 9.9854
+
+48828.downsampled.bam
+Average depth: 10.0114
+
+49804.downsampled.bam
+Average depth: 9.99084
+
+49805.downsampled.bam
+Average depth: 10.0727
+
+49806.sorted.bam
+Average depth: 8.82031
+
+50753.downsampled.bam
+Average depth: 10.0095
+
+50930.sorted.bam
+Average depth: 9.12659
+
+51747.sorted.bam
+Average depth: 6.96313
+
+53078.sorted.bam
+Average depth: 6.53968
+
+6014.sorted.bam
+Average depth: 8.97837
+
+6015.downsampled.bam
+Average depth: 10.0359
+
+6016.sorted.bam
+Average depth: 7.67396
+
+6017.downsampled.bam
+Average depth: 10.0446
+
+6018.sorted.bam
+Average depth: 9.3052
+
+6019.downsampled.bam
+Average depth: 9.97506
+
+6020.downsampled.bam
+Average depth: 10.0115
+
+6025.downsampled.bam
+Average depth: 10.1012
+
+6026.downsampled.bam
+Average depth: 10.0517
+
+6027.downsampled.bam
+Average depth: 10.1045
+
+CLRA.downsampled.bam
+Average depth: 10.1733
+
+RK01.sorted.bam
+Average depth: 9.11409
+
+RK02.downsampled.bam
+Average depth: 10.0057
+
