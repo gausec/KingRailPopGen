@@ -15,7 +15,7 @@ ANGSD=../../angsd
 ```
 1.2 Beagle file
 ```
-$ANGSD/angsd -bam BamFileList -ref CLRAindex/Rallus_crepitans_1.0.fasta -anc CLRAindex/Rallus_crepitans_1.0.fasta -GL 2 -doMajorMinor 1 -doMaf 2 -doSaf 1 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20  -doGlf 2 -out input -nThreads 8
+$ANGSD/angsd -bam BamFileList -ref CLRAindex/Rallus_crepitans_1.0.fasta -anc CLRAindex/Rallus_crepitans_1.0.fasta -GL 2 -doMajorMinor 1 -doMaf 2 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20  -doGlf 2 -out input -nThreads 8
 ```
 - `-doGlf 2` = beagle format
 - `-bam BamFileList` = analyze data from bam files 
