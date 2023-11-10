@@ -15,10 +15,14 @@ ANGSD=../../angsd
 ```
 1.2 Beagle file
 ```
-$ANGSD/angsd -bam BamFileList.txt -ref CLRAindex/Rallus_crepitans_1.0.fasta -anc CLRAindex/Rallus_crepitans_1.0.fasta -GL 1 -doMajorMinor 1 -doMaf 1 -doSaf 1 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20  -doGlf 2 -out input -nThreads 8
+$ANGSD/angsd -bam BamFileList -ref CLRAindex/Rallus_crepitans_1.0.fasta -anc CLRAindex/Rallus_crepitans_1.0.fasta -GL 2 -doMajorMinor 1 -doMaf 2 -doSaf 1 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20  -doGlf 2 -out input -nThreads 8
 ```
-- `-GL 1` = SAMtools model
 - `-doGlf 2` = beagle format
+- `-bam BamFileList` = analyze data from bam files 
+- `-GL 2` = calculate the genotype likelihood using the GATK method (`-GL 1` would be SAMtools model)
+- `-doMajorMinor 1` = infer the major and minor alleles
+- `-doMAF 2` = estimate the allele frequencies assuming known minor 
+- `-SNP_pval 1e-6` = only keep those sites that have a p-value less than 1e-6 for being variable
   
 
 &nbsp;
