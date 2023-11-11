@@ -122,7 +122,7 @@ xval_result$`Number of PCs Achieving Lowest MSE`
 
 &nbsp;
 
-#### Construct neighbour-joining tree of samples from estimated covariance matrix estimated based on indivdual allele frequencies.
+#### Construct neighbor-joining tree of samples from estimated covariance matrix estimated based on indivdual allele frequencies.
 
 
 ```
