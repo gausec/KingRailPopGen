@@ -25,7 +25,7 @@ pip3 install -e .
 ```
 ##### &nbsp; 2.2 Perform principal component analysis on the genoltype liklihood beagle files
 ```
- pcangsd -b genolike.beagle.gz --sites_save -t 20 -o output.pcangsd
+ pcangsd -b input.beagle.gz --sites_save -t 20 -o output.pcangsd
 ```
 ---
 &nbsp;
@@ -115,7 +115,20 @@ for (num_pcs in pc_range) {
 ```
 xval_result$`Number of PCs Achieving Lowest MSE`
 ```
+&nbsp;
+
+---
+### Neighbour-joining tree
+
+&nbsp;
+
+#### Construct neighbour-joining tree of samples from estimated covariance matrix estimated based on indivdual allele frequencies.
 
 
+```
+ pcangsd -b input.beagle.gz --tree --tree_sample PopInfo.csv -o output.tree
+```
+--tree
+--tree_samples
 
 
