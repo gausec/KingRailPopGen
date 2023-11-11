@@ -25,7 +25,7 @@ pip3 install -e .
 ```
 ##### &nbsp; 2.2 Perform principal component analysis on the genoltype liklihood beagle files
 ```
- pcangsd -b input.beagle.gz --sites_save -t 20 -o output.pcangsd
+ pcangsd -b 10x.beagle.gz --filterSites sites.txt -t 20 -o output.pcangsd
 ```
 ---
 &nbsp;
@@ -126,7 +126,7 @@ xval_result$`Number of PCs Achieving Lowest MSE`
 
 
 ```
- pcangsd -b input.beagle.gz --tree --tree_sample PopInfo.csv -o output.tree
+ pcangsd -b input.beagle.gz --tree --tree_sample PopInfo.csv --filterSites sites.txt -t 20 -o output.tree
 ```
 --tree
 --tree_samples
