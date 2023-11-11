@@ -141,7 +141,7 @@ library(ape)
 tree <- read.tree("output.tree.tree")
 ```
 ```
-pdf("phylogenetic_tree.pdf")
+pdf("tree.pdf")
 plot(tree, type = "fan", cex=0.25)
 dev.off()
 ```
