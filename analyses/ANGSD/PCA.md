@@ -130,5 +130,18 @@ xval_result$`Number of PCs Achieving Lowest MSE`
 ```
 --tree
 --tree_samples
+&nbsp;
 
+#### Plot in R
+
+```
+library(ape)
+```
+```
+tree <- read.tree("output.tree.tree")
+```
+pdf("phylogenetic_tree.pdf")
+plot(tree, type = "fan", cex=0.25)
+dev.off()
+```
 
