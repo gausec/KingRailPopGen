@@ -80,6 +80,8 @@ makeblastdb -in  Chromosome5.fasta  -dbtype nucl -out chr5_db
 samtools fasta 11101.downsampled.bam > 11101.fasta
 ```
 
+&nbsp;
+
 #### 3. Perform Sequence Searches against reference 
 3.1 W chromsome
 ```
