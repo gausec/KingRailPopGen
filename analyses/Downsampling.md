@@ -75,32 +75,37 @@ makeblastdb -in  Chromosome4.fasta  -dbtype nucl -out chr4_db
 makeblastdb -in  Chromosome5.fasta  -dbtype nucl -out chr5_db
 ```
 &nbsp;
-#### 2. Perform Sequence Searches against reference 
-1.1 W chromsome
+#### 2. BAM query file > FASTA
+```
+samtools fasta 11101.downsampled.bam > 11101.fasta
+```
+
+#### 3. Perform Sequence Searches against reference 
+3.1 W chromsome
 ```
 blastn -query ../11101.fasta -db W_chromosome_db -out blast_output/W_chromosome_results.tx
 ```
-1.2 Z chromosome
+3.2 Z chromosome
 ```
 blastn -query ../11101.fasta -db Z_chromosome_db -out blast_output/Z_chromosome_results.txt
 ```
-1.2 chromosome 1
+3.3 chromosome 1
 ```
 blastn -query ../11101.fasta -db chr1_db -out -evalue 1e-6 blast_output/chromosome1_results.txt
 ```
-1.3 chromosome 2
+3.4 chromosome 2
 ```
 blastn -query ../11101.fasta -db chr2_db -out -evalue 1e-6 blast_output/chromosome2_results.txt
 ```
-1.4 chromosome 3
+3.5 chromosome 3
 ```
 blastn -query ../11101.fasta -db chr3_db -out -evalue 1e-6 blast_output/chromosome3_results.txt
 ```
-1.5 chromosome 4
+3.6 chromosome 4
 ```
 blastn -query ../11101.fasta -db chr4_db -out -evalue 1e-6 blast_output/chromosome4_results.txt
 ```
-1.6 chromosome 5
+3.7 chromosome 5
 ```
 blastn -query ../11101.fasta -db chr5_db -out -evalue 1e-6 blast_output/chromosome5_results.txt
 ```
