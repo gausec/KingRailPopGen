@@ -45,9 +45,9 @@ makeblastdb -in  Chromosome4.fasta  -dbtype nucl -out chr4_db
 makeblastdb -in  Chromosome5.fasta  -dbtype nucl -out chr5_db
 ```
 &nbsp;
-#### 2. BAM query file > FASTA
+#### 2. BAM query file > FASTA (Note: this wasn't the correct format, so I used the reference fasta as a query)
 ```
-samtools fasta 11101.downsampled.bam > 11101.fasta
+samtools fasta 11101.downsampled.bam > 11101.fasta 
 ```
 
 &nbsp;
@@ -67,31 +67,31 @@ blastn -query 11101.fasta -db Z_chromosome_db -evalue 1e-2 -out blast_output/Z_c
 
 3.3 chromosome 1
 ```
-blastn -query 11101.fasta -db chr1_db -evalue 1e-2 -out blast_output/chromosome1_results.txt
+blastn -query Rallus_crepitans_1.0.fasta -db chr1_db -evalue 1e-6 -out blast_output/chromosome1_results.txt
 ```
 &nbsp;
 
 3.4 chromosome 2
 ```
-blastn -query 11101.fasta -db chr2_db -evalue 1e-2 -out blast_output/chromosome2_results.txt
+blastn -query Rallus_crepitans_1.0.fasta -db chr2_db -evalue 1e-6 -out blast_output/chromosome2_results.txt
 ```
 &nbsp;
 
 3.5 chromosome 3
 ```
-blastn -query 11101.fasta -db chr3_db -evalue 1e-2 -out blast_output/chromosome3_results.txt
+blastn -query Rallus_crepitans_1.0.fasta -db chr3_db -evalue 1e-6 -out blast_output/chromosome3_results.txt
 ```
 &nbsp;
 
 3.6 chromosome 4
 ```
-blastn -query 11101.fasta -db chr4_db -evalue 1e-2 -out blast_output/chromosome4_results.txt
+blastn -query Rallus_crepitans_1.0.fasta -db chr4_db -evalue 1e-6 -out blast_output/chromosome4_results.txt
 ```
 &nbsp;
 
 3.7 chromosome 5
 ```
-blastn -query 11101.fasta -db chr5_db -evalue 1e-2 -out blast_output/chromosome5_results.txt
+blastn -query Rallus_crepitans_1.0.fasta -db chr5_db -evalue 1e-6 -out blast_output/chromosome5_results.txt
 ```
 
 
