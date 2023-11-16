@@ -99,5 +99,11 @@ my @sorted_positions = sort { $a <=> $b } map { $_->[0], $_->[1] } @HSP_position
 my $overall_start = $sorted_positions[0];
 my $overall_end   = $sorted_positions[-1];
 
-print "\nOverall range on query sequence: $overall_start..$overall_end\n";
+# Output to a text file
+open(my $output_fh, '>', 'output.txt') or die("Could not open file 'output.txt' $!\n");
+
+print $output_fh "\nOverall range on query sequence: $overall_start..$overall_end\n";
+
+close($output_fh);
+
 
