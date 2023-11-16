@@ -1,10 +1,9 @@
 ## Analyses
 ---
 ### Contents
-- **Preprocessing**: A Markdown file containing Bash shell script written to assess quality, filter, and trim demultiplexed 150 bp paired-end sequencing reads.
-- **Genome_Mapping**: A Markdown file containing Bash shell script for mapping reads to a reference genome.
+
 - **ANGSD**: Markdown files with information about tests run.
-- **VariantCalling**: A markdown file containing Bash shell script for creating vcf files.
+- **VariantCalling**: A markdown file containing Bash shell commands for creating BCF files.
 ---
 ### King Rail Sample Populations
 <img
