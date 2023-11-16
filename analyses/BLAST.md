@@ -105,3 +105,34 @@ perl extract_HSP_information.pl chromosome1_results.txt
 
 - *This script can be found in the bin subdirectory*
 
+
+---
+
+### I will try to use Bedtools to extract overlapping regions
+
+- merge chromosome fasta files
+```
+cat chromosome1.fasta chromosome2.fasta chromosome3.fasta chromosome4.fasta chromosome5.fasta > merged.fasta
+```
+&npsp;
+
+- index
+```
+bwa index merged. fasta
+```
+
+- align king rail genome to chromosome fasta
+```
+bwa mem -t 16 merged.fasta ../11101-clean-R1.fastq.gz ../11101-clean-R2.fastq.gz | samtools sort -o 11101_CH.bam 
+```
+&nbsp;
+
+- convert BAM > BED file
+```
+bedtools bamtobed -i 11101_CH.bam > aligned_11101_CH.bed
+```
+
+- extract regions of interest
+```
+cat aligned_11101_CH.bed | bedtools intersect -a aligned_11101_CH.bed -b - > extracted_positions.bed
+```
