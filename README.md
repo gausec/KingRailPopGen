@@ -8,8 +8,8 @@ I am interested in comparing four geographically separate king rail populations 
 
 ***
 ### Repo Contents
-- **analyses**: A collection of subdirectories containing analysis information
-- **bin**: Bash shell and R scripts written by Carol Gause
+- **analyses**: A collection of subdirectories containing analysis information.
+- **bin**: Bash shell and R scripts were written by Carol Gause.
   - **Average_Depth.sh**: A bash shell script to calculate average depth accross a genome.
   - **MapAndSort.sh**:  A bash shell script to map fastq files to a reference genome and sort the output bam file.
   - **bcftools.sh**: A bash shell script to create a VCF file containing variant calls from a BAM file.
@@ -17,8 +17,10 @@ I am interested in comparing four geographically separate king rail populations 
   - **PCAngsdPlot.R**: An R script to create a PCA plot from the covariance matrix output of PCANGSD.
   - **bcftools.sh**: A bash shell script to process sorted bam files using bcftools to generate VCF output files with appropriate prefixes.
   - **extract_HSP_information.pl**: A perl script by James Tisdall (2001) to extract HSP information from BLAST output.
-
-- **results**: A collection of subdirectories containing outputs of pre-processing steps and analyses
+- **data**: A selection of data.
+- **genome_mapping**: A Markdown file containing Bash shell commands for mapping reads to a reference genome.
+- -**preprocessing**: A Markdown file containing Bash shell commands written to assess quality, filter, and trim demultiplexed 150 bp paired-end sequencing reads.
+- **results**: A collection of subdirectories containing outputs of pre-processing steps and analyses.
 
 ***
 
