@@ -38,14 +38,18 @@ sub extract_HSP_information {
 
     $subject = join( '', ($HSP =~ /^Sbjct.*\n/gm) );
 
-    $query_range   = join( '..', ($query =~ /(\d+).*\D(\d+)/s) );
-    $subject_range = join( '..', ($subject =~ /(\d+).*\D(\d+)/s) );
+    my ($query_start, $query_end) = ($query =~ /(\d+).*\D(\d+)/s);
+    my ($subject_start, $subject_end) = ($subject =~ /(\d+).*\D(\d+)/s);
+
+    $query_range   = join( '..', $query_start, $query_end );
+    $subject_range = join( '..', $subject_start, $subject_end );
 
     $query =~ s/[^acgt]//g;
     $subject =~ s/[^acgt]//g;
 
-    return ( $expect, $query, $query_range, $subject, $subject_range );
+    return ( $expect, $query, $query_range, $subject, $subject_range, $query_start, $query_end );
 }
+
 
 # Main program
 if ( @ARGV != 1 ) {
@@ -63,48 +67,26 @@ close($fh);
 my @alignments = split(/^BLASTN.*?^Query=.*?^>.*?\n/ms, $blast_content);
 
 # Process each alignment
-foreach my $alignment (@alignments) {
-    next unless $alignment =~ /\S/;  # Skip empty alignments
+# Print the results for each HSP
+foreach my $hsp (@HSPs) {
+    my ( $expect, $query, $query_range, $subject, $subject_range, $query_start, $query_end ) =
+      extract_HSP_information($hsp);
 
-    # Parse HSPs
-    my @HSPs = parse_blast_alignment_HSP($alignment);
+    # Print the results for each HSP
+    print "\n-> Expect value:   $expect\n";
+    print "\n-> Query string:   $query\n";
+    print "\n-> Query range:    $query_range\n";
+    print "\n-> Subject String: $subject\n";
+    print "\n-> Subject range:  $subject_range\n";
 
-    # Process each HSP
-    foreach my $hsp (@HSPs) {
-        my ( $expect, $query, $query_range, $subject, $subject_range ) =
-          extract_HSP_information($hsp);
-
-        # Print the results for each HSP
-        print "\n-> Expect value:   $expect\n";
-        print "\n-> Query string:   $query\n";
-        print "\n-> Query range:    $query_range\n";
-        print "\n-> Subject String: $subject\n";
-        print "\n-> Subject range:  $subject_range\n";
-    }
+    # Print the start and end positions
+    print "\n-> Query start position: $query_start\n";
+    print "\n-> Query end position:   $query_end\n";
 }
 
-# Subroutine to parse HSPs from a BLAST alignment
-sub parse_blast_alignment_HSP {
-    my ($alignment) = @_;
+# Determine the overall range on the query sequence
+my @sorted_positions = sort { $a <=> $b } map { $_->[0], $_->[1] } @HSP_positions;
+my $overall_start = $sorted_positions[0];
+my $overall_end   = $sorted_positions[-1];
 
-    # declare and initialize variables
-    my $beginning_annotation = '';
-    my $HSP_section          = '';
-    my @HSPs                 = ();
-
-    # Extract the beginning annotation and HSPs
-    ( $beginning_annotation, $HSP_section ) =
-      ( $alignment =~ /(.*?)(^ Score =.*)/ms );
-
-    # Store the $beginning_annotation as the first entry in @HSPs
-    push( @HSPs, $beginning_annotation );
-
-    # Parse the HSPs, store each HSP as an element in @HSPs
-    while ( $HSP_section =~ /(^ Score =.*\n)(^(?! Score =).*\n)+/gm ) {
-        push( @HSPs, $& );
-    }
-
-    # Return an array with first element = the beginning annotation,
-    # and each successive element = an HSP
-    return @HSPs;
-}
+print "\nOverall range on query sequence: $overall_start..$overall_end\n";
