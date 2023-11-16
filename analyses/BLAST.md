@@ -119,7 +119,8 @@ perl extract_HSP_information.pl chromosome1_results.txt
 cat chromosome1.fasta chromosome2.fasta chromosome3.fasta chromosome4.fasta chromosome5.fasta > merged.fasta
 ```
 
-&npsp;
+&nbsp;
+
 
 - index
 ```
