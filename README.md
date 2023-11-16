@@ -16,6 +16,7 @@ I am interested in comparing four geographically separate king rail populations 
   - **flagstat.sh**: A bash shell script to append the names of BAM files to a text file and executes samtools flagstat on each of them. It then adds the output to the same text file.
   - **PCAngsdPlot.R**: An R script to create a PCA plot from the covariance matrix output of PCANGSD.
   - **bcftools.sh**: A bash shell script to process sorted bam files using bcftools to generate VCF output files with appropriate prefixes.
+  - **extract_HSP_information.pl**: A perl script by James Tisdall (2001) to extract HSP information from BLAST output.
 
 - **results**: A collection of subdirectories containing outputs of pre-processing steps and analyses
 
