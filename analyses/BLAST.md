@@ -101,8 +101,7 @@ blastn -query Rallus_crepitans_1.0.fasta -db chr5_db -evalue 1e-6 -out blast_out
 ```
 perl extract_HSP_information.pl chromosome1_results.txt
 ```
-*Repeat for all output files*
-&nbsp;
+- *Repeat for all output files*
 
-*This script can be found in the bin subdirectory*
+- *This script can be found in the bin subdirectory*
 
