@@ -93,5 +93,14 @@ blastn -query Rallus_crepitans_1.0.fasta -db chr4_db -evalue 1e-6 -out blast_out
 ```
 blastn -query Rallus_crepitans_1.0.fasta -db chr5_db -evalue 1e-6 -out blast_output/chromosome5_results.txt
 ```
+&nbsp;
+&nbsp;
 
+
+#### 4. Extract HSP info
+```
+perl extract_HSP_information.pl chromosome1_results.txt
+```
+*Repeat for all output files*
+*This script can be found in the bin subdirectory*
 
