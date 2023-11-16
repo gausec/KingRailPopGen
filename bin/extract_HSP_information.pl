@@ -1,6 +1,5 @@
 ############################################################
-#
-# BeginPerlBioinfo.pm
+#  
 # - a library of subroutines
 #   from the examples and text in the book:
 #
@@ -13,7 +12,10 @@
 # Version 20011230
 #   incorporates a few errata and bug fixes
 #
+# Original code available in the "BeginPerlBioinfo.pm" module.
+#
 ############################################################
+
 
 #!/usr/bin/perl
 use strict;
