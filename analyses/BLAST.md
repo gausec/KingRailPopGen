@@ -118,24 +118,28 @@ perl extract_HSP_information.pl chromosome1_results.txt
 ```
 cat chromosome1.fasta chromosome2.fasta chromosome3.fasta chromosome4.fasta chromosome5.fasta > merged.fasta
 ```
+
 &npsp;
 
 - index
 ```
 bwa index merged. fasta
 ```
+
 &nbsp;
 
 - align king rail genome to chromosome fasta
 ```
 bwa mem -t 16 merged.fasta ../11101-clean-R1.fastq.gz ../11101-clean-R2.fastq.gz | samtools sort -o 11101_CH.bam 
 ```
+
 &nbsp;
 
 - convert BAM > BED file
 ```
 bedtools bamtobed -i 11101_CH.bam > aligned_11101_CH.bed
 ```
+
 &nbsp;
 
 - extract regions of interest
