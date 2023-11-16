@@ -19,7 +19,7 @@ I am interested in comparing four geographically separate king rail populations 
   - **extract_HSP_information.pl**: A perl script by James Tisdall (2001) to extract HSP information from BLAST output.
 - **data**: A selection of data.
 - **genome_mapping**: A Markdown file containing Bash shell commands for mapping reads to a reference genome.
-- -**preprocessing**: A Markdown file containing Bash shell commands written to assess quality, filter, and trim demultiplexed 150 bp paired-end sequencing reads.
+- **preprocessing**: A Markdown file containing Bash shell commands written to assess quality, filter, and trim demultiplexed 150 bp paired-end sequencing reads.
 - **results**: A collection of subdirectories containing outputs of pre-processing steps and analyses.
 
 ***
