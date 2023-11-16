@@ -16,7 +16,6 @@
 #
 ############################################################
 
-
 #!/usr/bin/perl
 use strict;
 use warnings;
@@ -50,7 +49,6 @@ sub extract_HSP_information {
     return ( $expect, $query, $query_range, $subject, $subject_range, $query_start, $query_end );
 }
 
-
 # Main program
 if ( @ARGV != 1 ) {
     die("Usage: $0 <blast_output_file>\n");
@@ -67,21 +65,33 @@ close($fh);
 my @alignments = split(/^BLASTN.*?^Query=.*?^>.*?\n/ms, $blast_content);
 
 # Process each alignment
-# Print the results for each HSP
-foreach my $hsp (@HSPs) {
-    my ( $expect, $query, $query_range, $subject, $subject_range, $query_start, $query_end ) =
-      extract_HSP_information($hsp);
+my @HSP_positions; # to collect start and end positions
 
-    # Print the results for each HSP
-    print "\n-> Expect value:   $expect\n";
-    print "\n-> Query string:   $query\n";
-    print "\n-> Query range:    $query_range\n";
-    print "\n-> Subject String: $subject\n";
-    print "\n-> Subject range:  $subject_range\n";
+foreach my $alignment (@alignments) {
+    next unless $alignment =~ /\S/;  # Skip empty alignments
 
-    # Print the start and end positions
-    print "\n-> Query start position: $query_start\n";
-    print "\n-> Query end position:   $query_end\n";
+    # Parse HSPs
+    my @HSPs = parse_blast_alignment_HSP($alignment);
+
+    # Process each HSP
+    foreach my $hsp (@HSPs) {
+        my ( $expect, $query, $query_range, $subject, $subject_range, $query_start, $query_end ) =
+          extract_HSP_information($hsp);
+
+        # Print the results for each HSP
+        print "\n-> Expect value:   $expect\n";
+        print "\n-> Query string:   $query\n";
+        print "\n-> Query range:    $query_range\n";
+        print "\n-> Subject String: $subject\n";
+        print "\n-> Subject range:  $subject_range\n";
+
+        # Print the start and end positions
+        print "\n-> Query start position: $query_start\n";
+        print "\n-> Query end position:   $query_end\n";
+
+        # Collect the start and end positions
+        push @HSP_positions, [$query_start, $query_end];
+    }
 }
 
 # Determine the overall range on the query sequence
@@ -90,3 +100,4 @@ my $overall_start = $sorted_positions[0];
 my $overall_end   = $sorted_positions[-1];
 
 print "\nOverall range on query sequence: $overall_start..$overall_end\n";
+
