@@ -155,5 +155,5 @@ cat aligned_11101_CH.bed | bedtools intersect -a aligned_11101_CH.bed -b - > ext
 
 - blast serach merged file with very strict evalue and tabular output
 ```
-blastn -query merged.fasta -db merged_db -evalue 1e-50 -outfmt 6 -out blast_output/merged.xml
+blastn -query 11101.fasta -db merged_db -evalue 1e-50 -outfmt 6 -out blast_output/merged.xml
 ```
