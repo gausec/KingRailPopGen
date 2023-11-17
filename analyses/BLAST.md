@@ -149,6 +149,16 @@ cat aligned_11101_CH.bed | bedtools intersect -a aligned_11101_CH.bed -b - > ext
 ```
 &nbsp;
 
+- convert to angsd format for downstream
+```
+awk '{print $1"\t"$2+1"\t"$3}' aligned_11101_CH.bed >angsd.file
+```
+
+- index
+```
+angsd sites index angsd.file
+```
+
 ---
 
 &nbsp;
