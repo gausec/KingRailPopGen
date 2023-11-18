@@ -28,9 +28,9 @@ wget https://github.com/broadinstitute/picard/releases/download/3.1.0/picard.jar
 ```
 &nbsp;
 
-#### 2. Downsample all bam files keeping 50% of all reads
+#### 2. Example code: downsample a given bam file keeping 80% of all reads
 ```
- java -jar jdk-21.0.1/bin/picard.jar DownsampleSam -I WholeGenomes/SortedBAM/11101.sorted.bam -O 11101.downsampled.bam -P 0.5
+ java -jar jdk-21.0.1/bin/picard.jar DownsampleSam -I WholeGenomes/SortedBAM/11101.sorted.bam -O 11101.downsampled.bam -P 0.80
 ```
 
 &nbsp;
