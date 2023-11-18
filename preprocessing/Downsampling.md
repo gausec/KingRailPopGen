@@ -21,7 +21,7 @@ java=~/jdk-21.0.1/bin
 ```
 bam=~/WholeGenomes/SortedBAM/
 ```
-&nbsp; 1.5 Get newest version of picard tools (I but this in the java bin directory)
+&nbsp; 1.5 Get newest version of picard tools (in the java bin directory)
 ```
 wget https://github.com/broadinstitute/picard/releases/download/3.1.0/picard.jar
 
