@@ -8,7 +8,7 @@ conda install -c bioconda ragtag
 ```
 ragtag.py scaffold Chicken.fna Rallus_crepitans_1.0.fasta -o CLRA.out
 ```
--rename output fasta in the CLRA.out directory
+- rename output fasta in the CLRA.out directory
 ```
 mv ragtag.scaffold.fasta ../../Improved.CLRA.fasta
 ```
