@@ -40,7 +40,7 @@ for FileName in *_R2_001.fastq.gz; do name=$(echo "$FileName" | cut -c1-5); mv "
 2.2 Use a for loop to run the `fastp` command (without changing default quality parameters) for all fastq files. This command specifies the input files for both the forward (`-i`) and reverse (`-I`) reads, as well as the output files for the processed reads (`-o` and `-O`).  
 
 ```
-for FileName in *_R1.fastq.gz; do name=$(echo $FileName | cut -c1-5); fastp -i $name*_R1.fastq.gz -I $name*_R2.fastq.gz -o cleaned/$name*-clean-R1.fastq.gz -O cleaned/$name-clean-R2.fastq.gz -w 10 --html reports/$name.html --json reports/$name.json; done
+for FileName in *_R1.fastq.gz; do name=$(echo $FileName | cut -c1-5); fastp -i $name*_R1.fastq.gz -I $name*_R2.fastq.gz -o cleaned/$name-clean-R1.fastq.gz -O cleaned/$name-clean-R2.fastq.gz -w 10 --html $name.html --json $name.json; done
 ```
 *Note: The above code contains a for loop that uses the variable `FileName` to iterate over all files ending in `_R1_001.fastq.gz` in the current directory. For each file, it extracts the first part of the file name (before the first underscore) using the `ls` and `cut` commands. This is saved to the variable name. Then, it runs the fastp command using the input file names with the `$name` variable inserted in appropriate positions, and puts the cleaned files in the `/cleaned` directory. The `--html` and `--json` options are used to generate an HTML and a JSON report file for each input file.* 
 
