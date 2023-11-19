@@ -7,6 +7,13 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 &nbsp;
 
 #### 1. Estimate the folded site frequency spectrum.
+&nbsp; 1.1 Generate site allele frequency likelihoods in SAF format for each population.
+```
+../../angsd/angsd -b NC_list.txt -anc ImprovedCLRA.fasta -gl 2 -doSaf 1 -doMaf 1 -SNP_pval 0.05 -minind 5 -nthreads 8 -doMajorMinor 1 -r Chr1-5.sites.txt -out Thetas/SFS.NC
+
+```
+&nbsp; *Repeat for the other 3 populations.*
+&nbsp; 1.2 Generate folded SFS for each population.
 ```
 ../../../../angsd/misc/realSFS SFS.NC.saf.idx -P 24 -fold 1 -r Chr1-5.sites.txt -anc ../../CLRAindex/Rallus_crepitans_1.0.fasta > out.NC.sfs
 ```
