@@ -13,7 +13,9 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 
 ```
 &nbsp; *Repeat for the other 3 populations.*
+
 &nbsp;
+
 &nbsp; 1.2 Generate folded SFS for each population.
 ```
 ../../../../angsd/misc/realSFS SFS.NC.saf.idx -P 24 -fold 1 -r Chr1-5.sites.txt -anc ../../CLRAindex/Rallus_crepitans_1.0.fasta > out.NC.sfs
