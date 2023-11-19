@@ -29,7 +29,11 @@ for file in *R1.fastq.gz; do base=$(basename "$file" | cut -c1-5); echo "$base";
 ```
 for file in *.sam; do base=$(basename "$file" .sam); samtools view -bS -@ 8 $file > BAM/${base}.bam; done
 ```
-*Note: to save time, pipe the mapped output directly to samtools to convert to a bam file.*
+- *Note: to save time, pipe the mapped output directly to samtools to sort and save output to a bam file.*
+- *Below is an example using the improved reference genome post-RagTag*:
+```
+bwa mem -t 30 ImprovedCLRAindex/ImprovedCLRA.fasta 11101-clean-R1.fastq.gz 11101-clean-R2.fastq.gz | samtools sort -@ 20 -o 11101.Improved.bam -
+```
 
 ---
 #### 4. Arrange the aligned reads in the BAM files based on their coordinates in the reference genome (This is called sorting)
