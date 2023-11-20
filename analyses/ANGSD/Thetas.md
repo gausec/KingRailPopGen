@@ -56,7 +56,7 @@ $${\color{orange}nucleotide \space diversity \space (π) \space and \space Watte
 
 #### 5. Extract the theta P (tP) column from the *.thetas.gz.pestPG output file and divide by the number of sites (nSites) used for the population. 
 ```
-awk '{print $5 / $14}' NC.out.thetas.idx.pestPG >> pi.txt
+awk '{print $5 / $14}' NC.pestPG >> pi.txt
 ```
 
 #### 6. Remove any empty rows.
@@ -64,7 +64,7 @@ awk '{print $5 / $14}' NC.out.thetas.idx.pestPG >> pi.txt
 awk '$1 != "-nan"' pi.txt > cleaned_pi.txt
 ```
 
-#### 7. Calculate pi.
+#### 7. Calculate average pi.
 ```
 awk '{ sum += $1 } END { print sum / NR }' cleaned_pi.txt
 ```
