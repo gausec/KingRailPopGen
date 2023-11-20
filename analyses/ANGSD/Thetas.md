@@ -14,7 +14,7 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 ```
 &nbsp; *Repeat for the other 3 populations.*
 
-- `-GL 1`: SAMtools model:GATK assumes sequencing errors are independent, while Samtools believes the second error (unrelated sequencing error that occurs independently of the first one and affects the same genomic position) comes at a higher chance, especially at high depths.
+- `-GL 1`: SAMtools model: GATK assumes sequencing errors are independent, while Samtools believes the second error (unrelated sequencing error that occurs independently of the first one and affects the same genomic position) comes at a higher chance, especially at high depths.
 
 &nbsp;
 
