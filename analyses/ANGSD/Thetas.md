@@ -9,12 +9,13 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 #### 1. Estimate the folded site frequency spectrum.
 &nbsp; 1.1 Generate site allele frequency likelihoods in SAF format for each population.
 ```
-../../angsd/angsd -b NC_list.txt -anc Ordered.CLRA.fasta  -GL 2 -doSaf 1 -SNP_pval 1e-6 -nthreads 8 -doMajorMinor 1 -r Chr1-5.sites.txt -out Thetas/NC.saf
+../../angsd/angsd -b NC_list.txt -anc Ordered.CLRA.fasta  -GL 1 -doSaf 1 -SNP_pval 1e-6 -nthreads 8 -doMajorMinor 1 -r Chr1-5.sites.txt -out Thetas/NC.saf
 
 ```
 &nbsp; *Repeat for the other 3 populations.*
 
-- `-GL 2`: GATK model
+- `-GL 1`: SAMtools model:GATK assumes sequencing errors are independent, while Samtools believes the second error (unrelated sequencing error that occurs independently of the first one and affects the same genomic position) comes at a higher chance, especially at high depths.
+
 &nbsp;
 
 &nbsp; 1.2 Generate folded SFS for each population.
