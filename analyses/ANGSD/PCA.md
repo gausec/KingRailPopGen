@@ -12,8 +12,9 @@ cut -f 1 -d $'\t' PopInfo.txt | sort | uniq -c
 ```
 ##### &nbsp; 1.2 Obtain genotype likelihoods in Beagle format
 ```
-angsd/angsd -bam BamFileList.txt -ref CLRAindex/Rallus_crepitans_1.0.fasta -GL 2 -doMajorMinor 1 -doMaf 1 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20  -doGlf 2 -out input -nThreads 8
+angsd/angsd -bam BamFileList.txt -ref CLRAindex/Rallus_crepitans_1.0.fasta -GL 1 -doMajorMinor 1 -doMaf 1 -minMaf 0.05 -minind 5 -SNP_pval 1e-6 -minMapQ 30 -minQ 20  -doGlf 2 -out input -nThreads 8
 ```
+- `-GL 1`: SAMtools model: GATK assumes sequencing errors are independent, while Samtools believes the second error (unrelated sequencing error that occurs independently of the first one and affects the same genomic position) comes at a higher chance, especially at high depths.
 
 #### 2. Run PCAngsd
 ##### &nbsp; 2.1 Install and build PCAngsd
