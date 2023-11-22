@@ -9,7 +9,7 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 #### 1. Estimate the folded site frequency spectrum.
 &nbsp; 1.1 Generate site allele frequency likelihoods in SAF format for each population.
 ```
-../../angsd/angsd -b NC_list.txt -anc Ordered.CLRA.fasta  -GL 1 -doSaf 1 -SNP_pval 1e-6 -nthreads 8 -doMajorMinor 1 -r Chr1-5.sites.txt -out Thetas/NC.saf
+angsd/angsd -b NC_list.txt -anc Ordered.CLRA.fasta  -GL 1 -doSaf 1 -nthreads 8 -out Thetas/NC.saf
 
 ```
 &nbsp; *Repeat for the other 3 populations.*
@@ -20,24 +20,24 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 
 &nbsp; 1.2 Generate folded SFS for each population.
 ```
-../../../../angsd/misc/realSFS SFS.NC.saf.idx -P 24 -fold 1 -r Chr1-5.sites.txt -anc Ordered.CLRA.fasta > out.NC.sfs
+angsd/misc/realSFS SFS.NC.saf.idx -P 24 -fold 1 -r Chr1-5.sites.txt -anc Ordered.CLRA.fasta > out.NC.sfs
 ```
 &nbsp;
 
 #### 2. Calculate per-site thetas.
 ```
-../../../../angsd/misc/realSFS saf2theta SFS.NC.saf.idx -P 20 -sfs out.NC.sfs -outname NC.out
+angsd/misc/realSFS saf2theta SFS.NC.saf.idx -P 20 -sfs out.NC.sfs -r Chr1-5.sites.txt -outname NC.out
 ```
 
 &nbsp;
 #### 3. Calculate neutrality test statistics using the [thetaStat program](http://www.popgen.dk/angsd/index.php/ThetaStat).
 ```
-../../../../angsd/misc/thetaStat do_stat NC.out.thetas.idx
+angsd/misc/thetaStat do_stat NC.out.thetas.idx
 ```
 &nbsp;
 #### 4. Sliding window analysis to calculate statistics in genomic windows.
 ```
- ../../../../angsd/misc/thetaStat do_stat NC.out.thetas.idx -win 5000 -step 1000 -outnames NC
+angsd/misc/thetaStat do_stat NC.out.thetas.idx -win 5000 -step 1000 -outnames NC
 ```
 - The *.thetas.idx.pestPG file contains statistics for different genomic regions.
 - Columns contain information about regions, reference name, center of the window, estimators of theta (Watterson, pairwise, etc.), and neutrality test statistics (Tajima's D, Fu&Li F's, etc.).
