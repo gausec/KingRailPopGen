@@ -4,7 +4,7 @@
 
 ### 1. Variant Calling
 &nbsp;
-- Index the Reference Genome:
+- 1.1 Index the Reference Genome:
 
 ```
 samtools faidx OrderedCLRA.fasta
@@ -36,7 +36,7 @@ bcftools index your_output.vcf.gz
 ```
 mkdir genome_scan
 ```
--3.2. Set Environmental Variable:
+- 3.2. Set Environmental Variable:
 ```
 VCF=~/vcf/your_output.vcf.gz
 ```
