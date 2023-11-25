@@ -1,17 +1,19 @@
 ## 1. Variant Calling
+&nbsp;
 - Index the Reference Genome:
 
 ```
-samtools faidx ImprovedCLRA.fasta
+samtools faidx OrderedCLRA.fasta
 ```
 - 1.2. Calling Variants:
 
 ```
-REF=~/reference/ImprovedCLRA.fasta
-bcftools mpileup -a AD,DP,SP -Ou -f $REF ${ARlist[@]} ${OHlist[@]} ${NClist[@]} ${FLlist[@]} | bcftools call -f GQ,GP -mO z -o ./your_output.vcf.gz
+bcftools mpileup -a AD,DP,SP -Ou -f OrderedCLRA.fasta *.bam | bcftools call -f GQ,GP -mO z -o output.vcf.gz
 ```
-
-## 2. Exploring VCF Files:
+&nbsp;
+&nbsp;
+## 2. Exploring VCF Files
+&nbsp;
 -2.1. Move VCF to a Directory:
 ```
 mkdir vcf
@@ -22,7 +24,10 @@ cd vcf
 ```
 bcftools index your_output.vcf.gz
 ```
-## 3. Computing Per-Site FST:
+&nbsp;
+&nbsp;
+## 3. Computing Per-Site FST
+&nbsp;
 - 3.1. Create a Directory for Genome Scan:
 ```
 mkdir genome_scan
