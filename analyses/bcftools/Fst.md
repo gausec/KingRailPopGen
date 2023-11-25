@@ -18,7 +18,7 @@ bcftools mpileup -a AD,DP,SP -Ou -f OrderedCLRA.fasta *.bam | bcftools call -f G
 &nbsp;
 ### 2. Exploring VCF Files
 &nbsp;
--2.1. Move VCF to a Directory:
+- 2.1. Move VCF to a Directory:
 ```
 mkdir vcf
 mv your_output.vcf.gz ./vcf
