@@ -1,4 +1,8 @@
-## 1. Variant Calling
+### I am using [bcftools to calculate pairwise FST](https://speciationgenomics.github.io/variant_calling/)
+---
+&nbsp;
+
+### 1. Variant Calling
 &nbsp;
 - Index the Reference Genome:
 
@@ -12,7 +16,7 @@ bcftools mpileup -a AD,DP,SP -Ou -f OrderedCLRA.fasta *.bam | bcftools call -f G
 ```
 &nbsp;
 &nbsp;
-## 2. Exploring VCF Files
+### 2. Exploring VCF Files
 &nbsp;
 -2.1. Move VCF to a Directory:
 ```
@@ -26,7 +30,7 @@ bcftools index your_output.vcf.gz
 ```
 &nbsp;
 &nbsp;
-## 3. Computing Per-Site FST
+### 3. Computing Per-Site FST
 &nbsp;
 - 3.1. Create a Directory for Genome Scan:
 ```
