@@ -9,8 +9,7 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 #### 1. Estimate the folded site frequency spectrum.
 &nbsp; 1.1 Generate site allele frequency likelihoods in SAF format for each population.
 ```
-angsd/angsd -b NC_list.txt -anc Ordered.CLRA.fasta  -GL 1 -doSaf 1 -nthreads 8 -out Thetas/NC.saf
-
+angsd/angsd -b OHlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1  -sites Chr1-5.sites.txt -nthreads 8 -out SAF.OH 
 ```
 &nbsp; *Repeat for the other 3 populations.*
 
@@ -20,22 +19,22 @@ angsd/angsd -b NC_list.txt -anc Ordered.CLRA.fasta  -GL 1 -doSaf 1 -nthreads 8 -
 
 &nbsp; 1.2 Generate folded SFS for each population.
 ```
-angsd/misc/realSFS SFS.NC.saf.idx -P 24 -fold 1 -r Chr1-5.sites.txt -anc Ordered.CLRA.fasta > out.NC.sfs
+angsd/misc/realSFS SAF.OH.saf.idx -P 24 -fold 1 -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta > Ohio.Folded.SFS 
 ```
 &nbsp;
 
 #### 2. Calculate per-site thetas.
 ```
-angsd/misc/realSFS saf2theta SFS.NC.saf.idx -P 20 -sfs out.NC.sfs -r Chr1-5.sites.txt -outname NC.out
+angsd/misc/realSFS saf2theta SAF.OH.saf.idx -outname Ohio.Folded -sfs Ohio.Folded.SFS -fold 1
 ```
 
 &nbsp;
 #### 3. Calculate neutrality test statistics using the [thetaStat program](http://www.popgen.dk/angsd/index.php/ThetaStat).
 ```
-angsd/misc/thetaStat do_stat NC.out.thetas.idx
+angsd/misc/thetaStat do_stat Ohio.Folded.thetas.idx 
 ```
 &nbsp;
-#### 4. Sliding window analysis to calculate statistics in genomic windows.
+#### 4. Sliding window analysis to calculate statistics in genomic windows. I skipped this step.
 ```
 angsd/misc/thetaStat do_stat NC.out.thetas.idx -win 5000 -step 1000 -outnames NC
 ```
@@ -59,25 +58,16 @@ $${\color{orange}nucleotide \space diversity \space (π) \space and \space Watte
 awk '{print $5 / $14}' NC.pestPG >> pi.txt
 ```
 
-#### 6. Remove any empty rows.
+#### 6. Calculate average pi.
 ```
-awk '$1 != "-nan"' pi.txt > cleaned_pi.txt
+awk '{ sum += $1 } END { print sum / NR }' pi.txt
 ```
-
-#### 7. Calculate average pi.
-```
-awk '{ sum += $1 } END { print sum / NR }' cleaned_pi.txt
-```
-#### 8. Calculate Watterson's theta from the *.thetas.gz.pestPG output file in the same way.
-8.1 Extract Watterson's theta (tW).
+#### 7. Calculate Watterson's theta from the *.thetas.gz.pestPG output file in the same way.
+7.1 Extract Watterson's theta (tW).
 ```
 awk '{print $4 / $14}' NC.out.thetas.idx.pestPG >> tW.txt
 ```
-8.2 Remove any empty rows.
+7.2 Calculate Waterson's theta by taking the average.
 ```
-awk '$1 != "-nan"' tW.txt > cleaned_tW.txt
-```
-8.3 Calculate Waterson's theta by taking the average.
-```
-awk '{ sum += $1 } END { print sum / NR }' cleaned_tW.txt
+awk '{ sum += $1 } END { print sum / NR }' tW.txt
 ```
