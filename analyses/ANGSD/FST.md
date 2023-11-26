@@ -4,7 +4,7 @@
 &nbsp;
 ---
 ### Steps:  
-#### 1. SFS estimation for each population
+#### 1. SFS estimation for each population (must be unfolded)
 &nbsp; 1.1 Create a text file list of bam files for each population
 - NC_list.txt
 - OH_list.txt
@@ -17,8 +17,7 @@
 
 &nbsp; 1.2 Generate site allele frequency likelihoods in SAF format for each population.  
 ```
-angsd/angsd -b NC_list.txt -anc Ordered.CLRA.fasta -GL 1 -doSaf 1 -nthreads 8 -out SAF.NC
-
+/angsd/angsd -b OHlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1  -sites Chr1-5.sites.txt -nthreads 8 -out SAF.OH 
 ```
 
 &nbsp; *Repeat for the other 3 populations.*
