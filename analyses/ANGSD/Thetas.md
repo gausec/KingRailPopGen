@@ -46,7 +46,7 @@ angsd/misc/thetaStat do_stat NC.out.thetas.idx -win 5000 -step 1000 -outnames NC
 
 ---
 
-$${\color{orange}nucleotide \space diversity \space (π) \space and \space Watterson's \space theta}$$
+$${\color{orange}Nucleotide \space diversity \space (π) \space and \space Watterson's \space theta}$$
 
 ---
 ### Next, I want to calculate nucleotide diversity (π) following the same method as [this study](https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-018-1209-y), and then calculate Watterson's theta. *There are now scripts for these in the bin subdirectory.*
