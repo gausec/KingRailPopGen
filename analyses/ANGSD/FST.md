@@ -24,6 +24,12 @@ angsd/angsd -b FLlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 3
 ```
 
 - `-GL 1`: SAMtools model: GATK assumes sequencing errors are independent, while Samtools believes the second error (unrelated sequencing error that occurs independently of the first one and affects the same genomic position) comes at a higher chance, especially at high depths.
+- `-minMapQ -minQ `: Mapping filters to refine which bases to be included.
+- `-minInd`: Discard a site if the effective sample size is below some threshold.
+- `-doSaf`:Calculate the Site allele frequency likelihood based on individual genotype likelihoods assuming HWE.
+- `-baq`: [Base Alignment Quality (BAQ) computation](https://academic.oup.com/bioinformatics/article/27/8/1157/227268?login=true), a method to improve the accuracy of single nucleotide polymorphism (SNP) calling by addressing errors caused by misalignments, particularly those related to indels. `-baq 1` = Normal BAQ (same as default in SAMtools).
+
+  
 &nbsp;
 
 ---
