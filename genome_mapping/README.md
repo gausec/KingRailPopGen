@@ -32,7 +32,7 @@ for file in *.sam; do base=$(basename "$file" .sam); samtools view -bS -@ 8 $fil
 - *Note: to save time, pipe the mapped output directly to samtools to sort and save output to a bam file.*
 - *Below is an example using the improved reference genome post-RagTag*:
 ```
-bwa mem -t 30 ImprovedCLRAindex/ImprovedCLRA.fasta 11101-clean-R1.fastq.gz 11101-clean-R2.fastq.gz | samtools sort -@ 20 -o 6014.Improved.bam -
+bwa mem -t 30 OrderedCLRA.fasta 11101-clean-R1.fastq.gz 11101-clean-R2.fastq.gz | samtools sort -@ 20 -o 11101.Improved.bam -
 ```
 
 ---
