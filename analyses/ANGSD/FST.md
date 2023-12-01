@@ -28,12 +28,12 @@
 
 #### 2. Use [RealSFS](http://www.popgen.dk/angsd/index.php/RealSFS) to calculate 2d sfs for each pair of populations
 ```
-../../../angsd/misc/realSFS AR/SFS.gl2.AR.saf.idx NC/SFS.NC.saf.idx -P 30 > AR_NC.ml;
-../../../angsd/misc/realSFS AR/SFS.gl2.AR.saf.idx OH/SFS.OH.saf.idx -P 30 > AR_OH.ml; 
-../../../angsd/misc/realSFS AR/SFS.gl2.AR.saf.idx FL/SFS.FL.saf.idx -P 30 > AR_FL.ml; 
-../../../angsd/misc/realSFS NC/SFS.NC.saf.idx OH/SFS.OH.saf.idx -r -P 30 > NC_OH.ml; 
-../../../angsd/misc/realSFS NC/SFS.NC.saf.idx FL/SFS.FL.saf.idx -r -P 30 > NC_FL.ml; 
-../../../angsd/misc/realSFS OH/SFS.OH.saf.idx FL/SFS.FL.saf.idx -r -P 30 > OH_FL.ml
+../../../angsd/misc/realSFS AR.saf.idx NC.saf.idx -P 30 > AR_NC.ml;
+../../../angsd/misc/realSFS AR.saf.idx OH.saf.idx -P 30 > AR_OH.ml; 
+../../../angsd/misc/realSFS AR.saf.idx FL.saf.idx -P 30 > AR_FL.ml; 
+../../../angsd/misc/realSFS NC.saf.idx OH.saf.idx -r -P 30 > NC_OH.ml; 
+../../../angsd/misc/realSFS NC.saf.idx FL.saf.idx -r -P 30 > NC_FL.ml; 
+../../../angsd/misc/realSFS OH.saf.idx FL.saf.idx -r -P 30 > OH_FL.ml
 
 ```
 
@@ -41,12 +41,12 @@
 #### 3.  For computing the pairwise fst, ANGSD reccomends performing pairwise FST calculations for each population separately. Generate separate `.fst` files for each pairwise population comparison
 &nbsp; 
 ```
-../../../angsd/misc/realSFS fst index AR/SFS.gl2.AR.saf.idx NC/SFS.NC.saf.idx -sfs AR_NC.ml -fstout FstOut.AR_NC;
-../../../angsd/misc/realSFS fst index AR/SFS.gl2.AR.saf.idx OH/SFS.OH.saf.idx -sfs AR_OH.ml -fstout FstOut.AR_OH;
-../../../angsd/misc/realSFS fst index AR/SFS.gl2.AR.saf.idx FL/SFS.FL.saf.idx -sfs AR_FL.ml -fstout FstOut.AR_FL;
-../../../angsd/misc/realSFS fst index NC/SFS.NC.saf.idx OH/SFS.OH.saf.idx -sfs NC_OH.ml -fstout FstOut.NC_OH;
-../../../angsd/misc/realSFS fst index NC/SFS.NC.saf.idx FL/SFS.FL.saf.idx -sfs NC_FL.ml -fstout FstOut.NC_FL;
-../../../angsd/misc/realSFS fst index OH/SFS.OH.saf.idx FL/SFS.FL.saf.idx -sfs OH_FL.ml -fstout FstOut.OH_FL
+../../../angsd/misc/realSFS fst index AR.saf.idx NC.saf.idx -sfs AR_NC.ml -fstout FstOut.AR_NC;
+../../../angsd/misc/realSFS fst index AR.saf.idx OH.saf.idx -sfs AR_OH.ml -fstout FstOut.AR_OH;
+../../../angsd/misc/realSFS fst index AR.saf.idx FL.saf.idx -sfs AR_FL.ml -fstout FstOut.AR_FL;
+../../../angsd/misc/realSFS fst index NC.saf.idx OH.saf.idx -sfs NC_OH.ml -fstout FstOut.NC_OH;
+../../../angsd/misc/realSFS fst index NC.saf.idx FL.saf.idx -sfs NC_FL.ml -fstout FstOut.NC_FL;
+../../../angsd/misc/realSFS fst index OH.saf.idx FL.saf.idx -sfs OH_FL.ml -fstout FstOut.OH_FL
 
 ```
 - *These files contain the pairwise FST values.*
