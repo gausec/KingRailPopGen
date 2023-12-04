@@ -39,9 +39,9 @@ angsd/angsd -b FLlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 3
 ../../../angsd/misc/realSFS AR.saf.idx NC.saf.idx -P 30 > AR_NC.ml;
 ../../../angsd/misc/realSFS AR.saf.idx OH.saf.idx -P 30 > AR_OH.ml; 
 ../../../angsd/misc/realSFS AR.saf.idx FL.saf.idx -P 30 > AR_FL.ml; 
-../../../angsd/misc/realSFS NC.saf.idx OH.saf.idx -r -P 30 > NC_OH.ml; 
-../../../angsd/misc/realSFS NC.saf.idx FL.saf.idx -r -P 30 > NC_FL.ml; 
-../../../angsd/misc/realSFS OH.saf.idx FL.saf.idx -r -P 30 > OH_FL.ml
+../../../angsd/misc/realSFS NC.saf.idx OH.saf.idx -P 30 > NC_OH.ml; 
+../../../angsd/misc/realSFS NC.saf.idx FL.saf.idx -P 30 > NC_FL.ml; 
+../../../angsd/misc/realSFS OH.saf.idx FL.saf.idx -P 30 > OH_FL.ml
 
 ```
 
