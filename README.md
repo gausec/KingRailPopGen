@@ -4,7 +4,7 @@ $${\color{green}\Huge {King \space Rail \space Population \space Comparison }}$$
 - - - -
 
 ### Aim
-I am interested in comparing four geographically separate king rail populations to assess genetic diversity and gene flow. Time permitting, I am also interested in finding genes or genomic regions that affect migration traits (*e.g.*, migratory timing and direction).
+I am interested in comparing four geographically separate king rail populations to assess genetic diversity and gene flow.
 
 ***
 ### Repo Contents
