@@ -55,4 +55,4 @@ $${\color{red}For \space these \space reasons, \space it \space is \space becomi
   alt="The king rail, photographed by Nicolas Main"
   title="The king rail, photographed by Nicolas Main"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
-*Photo by Nicolas Main*
+*Photo by Nicolas Main (2022)*
