@@ -75,7 +75,7 @@ transformed_data <- as.matrix(cov_matrix) %*% eigenvectors
 ```{r}
 pca.vectors <- data.frame(pop, V1 = transformed_data[, 1], V2 = transformed_data[, 2])
 ```
-##### &nbsp; 5.4 Plot PCA
+##### &nbsp; 5.4 Plot PCA using the [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html) package
 ```{r}
 pca <- ggplot(data = pca.vectors, aes(x = V1, y = V2, colour = Location, label = Sample_ID)) + # What data to plot, color-coding, and legend
   geom_point() + # data are represented as points 
