@@ -77,16 +77,23 @@ pca.vectors <- data.frame(pop, V1 = transformed_data[, 1], V2 = transformed_data
 ```
 ##### &nbsp; 5.4 Plot PCA
 ```{r}
-pca <- ggplot(data = pca.vectors, aes(x = V1, y = V2, colour = Location, label = Sample_ID)) + 
-  geom_point() + 
-  labs(title = "Individual Allele Frequency", x = "PC1", y = "PC2") + 
-  theme(plot.title = element_text(face = "bold"))
+pca <- ggplot(data = pca.vectors, aes(x = V1, y = V2, colour = Location, label = Sample_ID)) + # What data to plot, color-coding, and legend
+  geom_point() + # data are represented as points 
+  labs ( x = "PC1 (%)", y = "PC2 (%)") + # axis labels 
+  theme_minimal() + theme(axis.title.x = element_text(margin = margin(t = 20))) + # Change the x-axis margin spacing 
+  theme(axis.title.y = element_text(margin = margin(r = 20))) + # Change y-axis margin spacing  
+  theme(text = element_text(size = 20))  # Increase the text size
 
 plot(pca)
 ```
 ##### &nbsp; 5.5 Save plot as a .png file
 ```{r}
 ggsave("pca_plot.png", plot = pca, width = 8, height = 6, dpi = 300)
+
+# another option:
+# png(filename = "Just_KIRA_newgenomes.png", width = 1000, height = 800)
+# Plot(pca)
+# dev.off()
 ```
 
 ---
