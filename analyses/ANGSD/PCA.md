@@ -84,7 +84,25 @@ pca <- ggplot(data = pca.vectors, aes(x = V1, y = V2, colour = Location, label =
   theme(axis.title.y = element_text(margin = margin(r = 20))) + # Change y-axis margin spacing  
   theme(text = element_text(size = 20))  # Increase the text size
 
+
 plot(pca)
+```
+##### Sometimes, I want to see what points correspond to a sample ID. I can do that using the [ggrepel](https://ggrepel.slowkow.com/) package.
+```
+library(ggrepel)
+# sometimes I only want to look at specific points to see where they are in relation to other points. I can label just those:
+sample_ids_to_label <- c("NC48827.downsampled.bam", "NC43642.downsampled.bam", "43623.downsampled.bam")
+
+# subset the data to include only the rows with the specified samples
+samples_to_label <- subset(pca.vectors, Sample_ID %in% sample_ids_to_label)
+
+# add to the PCA plot
+pca +  geom_label_repel(data = samples_to_label, aes(label = Sample_ID),
+                   box.padding = 0.55, point.padding = 0.05, segment.color = "grey50", 
+                   max.overlaps = 10, show.legend = FALSE) # setting show.legend to false gets rid of those annoying "a" letters that ggrepel sometimes puts in your legend!
+
+# Adjust max.overlaps as needed to see the labels you need
+ 
 ```
 ##### &nbsp; 5.5 Save plot as a .png file
 ```{r}
@@ -136,8 +154,7 @@ xval_result$`Number of PCs Achieving Lowest MSE`
 ```
  pcangsd -b input.beagle.gz --tree --tree_sample PopInfo.csv --filterSites sites.txt -t 20 -o output.tree
 ```
---tree
---tree_samples
+
 &nbsp;
 
 #### Plot in R
