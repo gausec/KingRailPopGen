@@ -88,13 +88,13 @@ pca <- ggplot(data = pca.vectors, aes(x = V1, y = V2, colour = Location, label =
 plot(pca)
 ```
 
-##### &nbsp; 5.5 Sometimes, I want to see what points correspond to a sample ID. I can do that using the [ggrepel](https://ggrepel.slowkow.com/) package.
+##### &nbsp; 5.5 Sometimes, I want to label points by their sample ID. I can do that using the [ggrepel](https://ggrepel.slowkow.com/) package.
 ```
 library(ggrepel)
 # sometimes I only want to look at specific points to see where they are in relation to other points. I can label just those:
-sample_ids_to_label <- c("NC48827.downsampled.bam", "NC43642.downsampled.bam", "43623.downsampled.bam")
+sample_ids_to_label <- c("NC48827.downsampled.bam", "NC43642.downsampled.bam", "43623.downsampled.bam") # example IDs
 
-# subset the data to include only the rows with the specified samples
+# subset to include only the rows with the specified samples
 samples_to_label <- subset(pca.vectors, Sample_ID %in% sample_ids_to_label)
 
 # add to the PCA plot
@@ -126,22 +126,53 @@ Helpful tutorial: https://grunwaldlab.github.io/Population_Genetics_in_R/DAPC.ht
 &nbsp;
 
 #### 1. Cross validation to ID PCs
+
+##### &nbsp; 1.1 cross validation
 ```
-pc_range <- 40:70
+pc_range <- 5:30
 xval_results <- list()
 
 for (num_pcs in pc_range) {
-  # Perform cross-validation with num_pcs
-  xval_result <- xvalDapc(cov_matrix, grp = pca.vectors$Location, n.pca.max = num_pcs, n.rep = 30)
+  # cross-validation with num_pcs
+  xval_result <- xvalDapc(cov_matrix, grp = pca.vectors$Source, n.pca.max = num_pcs, n.rep = 1000)
   xval_results[[as.character(num_pcs)]] <- xval_result
 }
 ```
-&nbsp;
-
-#### 2. Extract
+##### &nbsp; 1.2 summarize
+```
+xval_result$DAPC
+````
+##### &nbsp; 1.3 extract number of PCs to conserve
 ```
 xval_result$`Number of PCs Achieving Lowest MSE`
 ```
+
+#### 2. DAPC  
+```
+dapc <- dapc(cov_matrix, grp = pca.vectors$Source, n.pca = 25, n.da = 5)
+# n.pca is the number of PCs achieving lowest MSE
+# n.da is the number of distinct groups
+```
+#### 3. Plot
+
+```
+scatter(dapc, scree.da = FALSE, bg = "white", cex = 1.15, cstar = 0, col = custom_colors, clab = 0, leg = TRUE, txt.leg = paste((unique(pca.vectors$Source))),  pch = 20) +
+ stat_ellipse() # confidence elipses
+
+# adding an inset plot for the cumulative variance 
+myInset <- function(){
+temp <- dapc$pca.eig
+temp <- 100* cumsum(temp)/sum(temp)
+plot(temp, col=rep(c("black","lightgrey"),
+c(dapc$n.pca,1000)), ylim=c(0,100),
+xlab="PCA eigenvalues", ylab="Cumulated variance (%)",
+cex=1, pch=20, type="h", lwd=2)
+}
+add.scatter(myInset(), posi="bottomleft",
+inset=c(-0.05,-0.12), ratio=.28,
+bg=transp("white"))
+```
+
 &nbsp;
 
 ---
