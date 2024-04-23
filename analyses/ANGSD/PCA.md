@@ -87,7 +87,8 @@ pca <- ggplot(data = pca.vectors, aes(x = V1, y = V2, colour = Location, label =
 
 plot(pca)
 ```
-##### Sometimes, I want to see what points correspond to a sample ID. I can do that using the [ggrepel](https://ggrepel.slowkow.com/) package.
+
+##### &nbsp; 5.5 Sometimes, I want to see what points correspond to a sample ID. I can do that using the [ggrepel](https://ggrepel.slowkow.com/) package.
 ```
 library(ggrepel)
 # sometimes I only want to look at specific points to see where they are in relation to other points. I can label just those:
@@ -102,9 +103,9 @@ pca +  geom_label_repel(data = samples_to_label, aes(label = Sample_ID),
                    max.overlaps = 10, show.legend = FALSE) # setting show.legend to false gets rid of those annoying "a" letters that ggrepel sometimes puts in your legend!
 
 # Adjust max.overlaps as needed to see the labels you need
- 
 ```
-##### &nbsp; 5.5 Save plot as a .png file
+
+##### &nbsp; 5.6 Save plot as a .png file
 ```{r}
 ggsave("pca_plot.png", plot = pca, width = 8, height = 6, dpi = 300)
 
