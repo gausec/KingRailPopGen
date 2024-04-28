@@ -156,7 +156,7 @@ dapc <- dapc(cov_matrix, grp = pca.vectors$Source, n.pca = 25, n.da = 5)
 #### 3. Plot
 
 ```
-scatter(dapc, scree.da = FALSE, bg = "white", cex = 1.15, cstar = 0, col = custom_colors, clab = 0, leg = TRUE, txt.leg = paste((unique(pca.vectors$Source))),  pch = 20) +
+scatter(dapc, scree.da = FALSE, bg = "white", cex = 1.15, cstar = 0, col = custom_colors, clab = 0, leg = TRUE,  pch = 20) +
  stat_ellipse() # confidence elipses
 
 # adding an inset plot for the cumulative variance 
