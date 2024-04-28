@@ -13,6 +13,7 @@
    - `help()` : sometimes there is documentation for an R command that you can check
    - `example()` : see examples of how to use a command
    - `read.csv()` and `read.table()`
-   - `class()` and `print(typeof())` : check the data type 
+   - `class()` and `print(typeof())` : check the data type
+   - Did you know in R studio, you can highlight text to add quotes just by using shift + `"` to save time?
 
 
