@@ -2,4 +2,4 @@
 
 ---
 
-*Note: Results and figures will not be posted here until they have been published.*
+*Note: Most results and figures will not be posted here until they have been published.*
