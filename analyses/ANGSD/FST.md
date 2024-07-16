@@ -17,10 +17,10 @@
 
 &nbsp; 1.2 Generate site allele frequency likelihoods in SAF format for each population.  
 ```
-angsd/angsd -b OHlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1  -sites Chr1-5.sites.txt -nthreads 8 -out OH;
-angsd/angsd -b NClist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1  -sites Chr1-5.sites.txt -nthreads 8 -out NC;
-angsd/angsd -b ARlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1  -sites Chr1-5.sites.txt -nthreads 8 -out AR;
-angsd/angsd -b FLlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1  -sites Chr1-5.sites.txt -nthreads 8 -out FL
+angsd/angsd -b OHlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1 -nthreads 8 -out OH;
+angsd/angsd -b NClist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1 -nthreads 8 -out NC;
+angsd/angsd -b ARlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1 -nthreads 8 -out AR;
+angsd/angsd -b FLlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1 -nthreads 8 -out FL
 ```
 
 - `-GL 1`: SAMtools model: GATK assumes sequencing errors are independent, while Samtools believes the second error (unrelated sequencing error that occurs independently of the first one and affects the same genomic position) comes at a higher chance, especially at high depths.
