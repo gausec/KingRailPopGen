@@ -9,7 +9,7 @@ Note: This method requires a SFS file for a given population. Tajima’s D has t
 #### 1. Estimate the folded site frequency spectrum.
 &nbsp; 1.1 Generate site allele frequency likelihoods in SAF format for each population.
 ```
-angsd/angsd -b OHlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1  -sites Chr1-5.sites.txt -nthreads 8 -out SAF.OH 
+angsd/angsd -b OHlist -anc Ordered.CLRA.fasta -ref Ordered.CLRA.fasta -minMapQ 30 -minQ 20 -GL 1 -minInd 8 -doSaf 1 -baq 1 -nthreads 8 -out SAF.OH 
 ```
 &nbsp; *Repeat for the other 3 populations.*
 
