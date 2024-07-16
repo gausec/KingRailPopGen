@@ -65,7 +65,7 @@ awk '{ sum += $1 } END { print sum / NR }' pi.txt
 #### 7. Calculate Watterson's theta from the *.thetas.gz.pestPG output file in the same way.
 7.1 Extract Watterson's theta (tW).
 ```
-awk '{print $4 / $14}' NC.out.thetas.idx.pestPG >> tW.txt
+awk '{print $4 / $14}' NC.pestPG >> tW.txt
 ```
 7.2 Calculate Waterson's theta by taking the average.
 ```
