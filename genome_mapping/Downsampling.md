@@ -39,7 +39,10 @@ wget https://github.com/broadinstitute/picard/releases/download/3.1.0/picard.jar
 
 #### 3. Sanity check using [samtools quickcheck](https://www.htslib.org/doc/samtools-quickcheck.html)
 ```
-samtools quickcheck -v *.bam > bad_bams.fofn   && echo 'all ok' || echo 'some files failed check, see bad_bams.fofn'
+samtools quickcheck -v *.bam > bad_bams.fofn   && echo 'all files passed the check' || echo 'some files failed the check, see bad_bams.fofn'
 ```
-The `-v` flag enables verbose output, which provides more details about any issues.
+Notes about sanity check script:
+- The `-v` flag enables verbose output, which provides more details about any issues.
+- The `.fofn` extension stands for "File of File Names." It's a convention used to indicate that the file contains a list of file names, often one per line. Here, `bad_bams.fofn` will contain a list of any files that failed the samtools quickcheck.
+- The double pipe `||` in shell scripting runs the second command only if the first command fails. It’s a way to handle errors or run an alternative action if the first command doesn’t work.
 &nbsp;
