@@ -35,3 +35,11 @@ wget https://github.com/broadinstitute/picard/releases/download/3.1.0/picard.jar
 
 &nbsp;
 
+&nbsp;
+
+#### 3. Sanity check using [samtools quickcheck](https://www.htslib.org/doc/samtools-quickcheck.html)
+```
+samtools quickcheck -v *.bam > bad_bams.fofn   && echo 'all ok' || echo 'some files failed check, see bad_bams.fofn'
+```
+`-v` : verbose output (more details if failed)
+&nbsp;
