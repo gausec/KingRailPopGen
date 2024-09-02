@@ -41,5 +41,5 @@ wget https://github.com/broadinstitute/picard/releases/download/3.1.0/picard.jar
 ```
 samtools quickcheck -v *.bam > bad_bams.fofn   && echo 'all ok' || echo 'some files failed check, see bad_bams.fofn'
 ```
-`-v` : verbose output (more details if failed)
+The `-v` flag enables verbose output, which provides more details about any issues.
 &nbsp;
