@@ -2,8 +2,8 @@
 ---
 ### Contents
 
-- **ANGSD**: Markdown files with information about tests run.
-- **VariantCalling**: A markdown file containing Bash shell commands for creating BCF files.
+- **ANGSD**: Markdown files with information about tests run using the ANGSD software suite.
+- **VariantCalling**: A markdown file containing Bash commands for creating BCF files.
 - **BLAST.md**: Information about BLAST seraches.
 ---
 ### King Rail Sample Populations
