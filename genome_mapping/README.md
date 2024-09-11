@@ -19,12 +19,12 @@ mkdir SAM
 ```
 2.1 Run the code in the background. The base name is extracted and stored as a local variable, `base`
 ```
-screen
+screen -S NameOfTask
 ```
 ```
 for file in *R1.fastq.gz; do base=$(basename "$file" | cut -c1-5); echo "$base"; bwa mem -t 16 index/Rallus_crepitans_1.0.fasta ${base}-R1.fastq.gz ${base}-R2.fastq.gz > SAM/${base}.sam; done
 ```
- -  *Next use `ctrl a` and then `d` to disown the process. The terminal can now be closed, and the command will finish running.*
+ - `screen` *can be used to run a task in the background, and the* `-S` *flag can be used to name the process. Next use `ctrl a` and then `d` to disown the process. The terminal can now be closed, and the command will finish running. You can view running screen sessions with* `screen -ls`, *and connect to one by name with* `screen -xS NameofTask`.
  -  *BWA alignment is performed using `bwa mem` with the clapper rail reference genome & fastq files. To speed up the process, `-t` indicates I want to use 16 threads (each thread is assigned a portion of the total computing resources, such as CPU time, and can execute independently of each other). The output is redirected to a SAM file using the `>` operator.*
 
 ---
