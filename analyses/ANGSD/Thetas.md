@@ -55,7 +55,7 @@ $${\color{orange}Nucleotide \space diversity \space (π) \space and \space Watte
 
 #### 5. Extract the theta P (tP) column from the *.thetas.gz.pestPG output file and divide by the number of sites (nSites) used for the population. 
 ```
-awk '{print $5 / $14}' NC.pestPG >> pi.txt
+awk 'NR > 1 {print $5 / $14}' NC.pestPG >> pi.txt
 ```
 
 #### 6. Calculate average pi.
@@ -65,7 +65,7 @@ awk '{ sum += $1 } END { print sum / NR }' pi.txt
 #### 7. Calculate Watterson's theta from the *.thetas.gz.pestPG output file in the same way.
 7.1 Extract Watterson's theta (tW).
 ```
-awk '{print $4 / $14}' NC.pestPG >> tW.txt
+awk 'NR > 1 {print $4 / $14}' NC.pestPG >> tW.txt
 ```
 7.2 Calculate Waterson's theta by taking the average.
 ```
