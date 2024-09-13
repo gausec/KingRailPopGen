@@ -1,1 +1,1 @@
-#### This is a space for data
+#### This is a folder contains a collection of data examples (not the full dataset).
