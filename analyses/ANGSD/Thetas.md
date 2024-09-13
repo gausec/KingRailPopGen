@@ -71,3 +71,4 @@ awk 'NR > 1 {print $4 / $14}' NC.pestPG >> tW.txt
 ```
 awk '{ sum += $1 } END { print sum / NR }' tW.txt
 ```
+ 
