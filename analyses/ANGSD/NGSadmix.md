@@ -62,6 +62,7 @@ for k in {1..10}; do angsd/NGSadmix -likes input.beagle.gz -K $k -seed 1 -P 25 -
 - `-mTol`= include high quality genotypes only
 - `-seed 1`= seed for initial guess in EM algorithm
 - `-P`= number of threads
+- Note: I ran this analysis 3 times to test convergence using `-seed` 1-3.
 
 &nbsp;
 &nbsp;
