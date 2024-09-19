@@ -16,4 +16,9 @@
    - `class()` and `print(typeof())` : check the data type
    - Did you know in R studio, you can highlight text to add quotes just by using shift + `"` to save time?
 
+3. Useful sites
+   - [ggplot2 aesthetics](https://r-graph-gallery.com/ggplot2-color.html)
+   - [ANGSD publication](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-014-0356-4)
+   - [ggplot2 cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf)
+
 
