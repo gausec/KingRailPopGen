@@ -118,7 +118,7 @@ $${\color{lightgreen}Repeat \space steps \space 6-8 \space to \space create \spa
 &nbsp;
 &nbsp;
 
-#### 9. Get an accurate estimate of the “best” K 
+#### 9. Get an estimate of the “best” 𝐾
 9.1 Libraries
 ```
 library(stringr)
@@ -146,7 +146,7 @@ foundset
 ```
 as.numeric( sub("\\D*(\\d+).*", "\\1", foundset) )
 ```
-9.6 store it in a dataframe (index 1:10, corresponding to K values)
+9.6 store it in a dataframe (index 1:10, corresponding to𝐾values)
 ```
 logs<-data.frame(K = rep(1:7, each=3))
 ```
@@ -154,7 +154,8 @@ logs<-data.frame(K = rep(1:7, each=3))
 ```
 logs$like<-as.vector(as.numeric( sub("\\D*(\\d+).*", "\\1", foundset) ))
 ```
-9.8 calculate delta K & probability (use these values to select K, which will be the one that has the highest value)
+9.8 calculate delta 𝐾 & probability (These values can be interpreted as a kind of "likelihood index" for each 
+𝐾, and can be used to select 𝐾, which will be the one that has the highest value)
 ```
 tapply(logs$like, logs$K, FUN= function(x) mean(abs(x))/sd(abs(x)))
 ```
