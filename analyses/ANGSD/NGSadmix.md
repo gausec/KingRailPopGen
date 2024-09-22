@@ -131,7 +131,7 @@ data<-list.files("structure_outs/", pattern = ".log", full.names = T)
 #sanity check
 data
 ```
-9.3 use `lapply` to read in all log files at once
+9.3 use `lapply` to read in all log files at once (note: I am only using the logs of 𝐾=1-7 here)
 ```
 bigData<-lapply(1:21, FUN = function(i) readLines(data[i]))
 ```
@@ -146,7 +146,7 @@ foundset
 ```
 as.numeric( sub("\\D*(\\d+).*", "\\1", foundset) )
 ```
-9.6 store it in a dataframe (index 1:10, corresponding to𝐾values)
+9.6 store it in a dataframe (index 1:7, corresponding to 𝐾 values)
 ```
 logs<-data.frame(K = rep(1:7, each=3))
 ```
